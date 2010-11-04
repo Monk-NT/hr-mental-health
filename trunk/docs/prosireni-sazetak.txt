@@ -1,0 +1,36 @@
+Mentalni poremećaji zanimljivo su područje proučavanja u kognitivnoj znanosti budući da nude mogućnost uvida u drugačije funkcioniranje mozga. 
+Shizofrenija se ističe sveobuhvatnošću mentalnih funkcija koje zahvaća, od čega ističemo promjene u mišljenju koje se očituju kao brzo skakanje misli s ideje na ideju, 
+bez jasne povezanosti, "ljepljivost" misli za jednu ideju i njeno teško mijenjanje, izmišljanje riječi i slično. 
+Bipolarni poremećaj primarno je poremećaj raspoloženja, no također može utjecati na kognitivne funkcije kao što su pažnja i verbalno pamćenje, 
+a dobivena je i povezanost sa kreativnošću. Navedene karakteristike oboljelih od ovih bolesti mogu se očitovati i u njihovom tekstualnom izričaju, 
+što u usporedbi sa tekstovima mentalno zdravih osoba otvara mogućnost automatskog kategoriziranja takvih tekstova. 
+Dijagnosticiranje mentalnih bolesti zahtjevan je problem, 
+pa bi izrada sustava koji procjenjuje pripadnost nekog teksta kategorijama bolesti i zdravlja mogla pružiti korisne dodatne informacije za dijagnostičare. 
+Cilj rada stoga je izraditi klasifikator tekstova dobivenih od sudionika različitog mentalnog stanja (psihički zdravi, shizofreni sudionici i sudionici s bipolarnim poremećajem). 
+Svrha rada je provjeriti jesu li karakteristike navedenih mentalnih poremećaja dovoljno izražene na tekstovima psihički bolesnih sudionika da bi se oni razlikovali od tekstova 
+psihički zdravih sudionika, te, ukoliko jesu, doprinijeti postupku dijagnostike.
+
+U radu Strous et al [1] rađena je automatska klasifikacija tekstova na temu 'Važna osoba u mom životu', koje su napisali 36 shizofrenih sudionika nasuprot 36 ne-shizofrenih sudionika, pomoću SVM i Bayesove regresije. Korištene se značajke najčešćih riječi, tri-grama slova (zbog specifičnosti hebrejskog jezika u kojima su gramatički značajni) i ponavljanje riječi, te je dobivena uspješnost klasifikacije tekstova 83,3%.
+Diederich, J. et al [2] kao skup za učenje koristili su tekstove 31 shizofrenog i 16 maničnih pacijenata psihijatrijske ustanove i 9 kontrolnih sudionika, koji su bilo verbalizirali tekst koji je kasnije pretipkan, bilo sami napisali tekst. Tekstovi su bili pisani na jednu od dvije zadane teme ('piknik u parku' i 'lopov') uz zadatak da se u tekst ukomponira unaprijed određena lista riječi. Tekstovi su pretvoreni u 'bag of words' oblik i korištena je frekvencija riječi, a učenje je izvedeno pomoću SVM i stabla odluke. Uspješnost klasifikacije shizofrene nasuprot kontrolne skupine bila je 77%, dok u klasifikaciji koja je uključivala manične sudionike uspješnost nije bila bolja od slučajne. 
+U našem radu, za razliku od navedenih, nastojat ćemo koristiti veći broj značajki, pokušati utvrditi koje najviše doprinose uspješnosti klasifikacije, i potencijalno koristiti drugačiji skup za učenje (tekstove poznatih pisaca).
+
+Skup za učenje na kojem će naš sustav trenirati sastojat će se, ukoliko bude dobavljiv, od tekstova na zadanu neutralnu temu koje su napisali sudionici 
+dijagnosticirani sa shizofrenijom, sudionici s bipolarnim poremećajem i psihički zdravi sudionici. 
+Ukoliko takav skup ne uspijemo pribaviti, skup će činiti tekstovi pisaca engleskog govornog područja za koje je poznato da imaju dijagnozu jedne od navedenih bolesti, 
+te tekstovi pisaca bez mentalnog poremećaja (objavljeni u knjigama no dostupni na Internetu), 
+te tekstovi istih skupina objavljeni na blogovima. 
+Pretpostavljamo da će eventualne razlike biti izraženije na blogovima zbog slobodnijeg stila pisanja i u prosjeku manje razvijenih spisateljskih vještina 
+autora blogova u usporedbi s poznatim piscima.
+
+Od značajki ćemo koristiti mjere stila (kao što su ponavljanje riječi, broj različitih riječi, najčešće riječi u tekstu) i značajke dokumenta temeljene na riječima
+(na primjer riječnički tri-grami, pojava i frekvencija funkcijske riječi). Koristit ćemo kombinaciju navedenih značajki da postignemo što bolje rezultate i da uspijemo odrediti
+koje su najznačajnije za rješavanje ovog problema.
+
+Sustav će učiti pomoću algoritma stroja s potpornim vektorima (SVM), a biti će izveden koristeći Weka-u, programski jezik Java i biblioteku libSVM. 
+Uspješnost sustava odredit će se postotkom pravilnog razvrstavanja teksta iz skupa za testiranje (tekstovi na kojima sustav nije učio).
+
+Ovim pristupom nadamo se uspješno klasificirati tekstove u navedene tri kategorije i doprinijeti identifikaciji značajki mišljenja shizofrenih i bipolarnih bolesnika koji bi mogli poslužiti u poboljšanju metoda dijagnosticiranja tih bolesti. 
+
+Strous, R.D. Koppel, M. Fine J. et al.: Automated Characterization and identification of schizophrenia in writing
+
+Diederich, J. Al-Ajmi, A. Yellowlees, P.(2007): Ex-ray: Data mining and mental health. Applied soft computing (7:3), pp 923-927.
