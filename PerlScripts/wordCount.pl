@@ -8,7 +8,7 @@ while(<STDIN>)
 	foreach $word (@words)
 	{
 		
-		if($word=~m/^[a-zA-Z]+?.$/)
+		if($word=~m/^?[a-zA-Z]+?.$/)
 		{
 			$i++;
 			print "$word";
