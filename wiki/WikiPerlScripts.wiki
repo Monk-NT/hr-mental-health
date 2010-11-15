@@ -1,0 +1,15 @@
+#summary How to use Perl scripts
+
+= Introduction =
+
+This is a simple guide how to use provided perl scripts
+
+
+= Word count script =
+
+For instance, we want to count all the words in text document "test.txt" and
+want it to be written to a "g.log" log file. We do that like this (on a windows machine):
+
+{{{
+perl wordCount.pl < test.txt > g.log
+}}} 
