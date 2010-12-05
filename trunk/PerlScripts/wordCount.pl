@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 %intpunct;
+%wlength;
 while(<STDIN>)
 {
 	$line = $_;
@@ -61,6 +62,15 @@ while(<STDIN>)
 				}
 			
 			$i++;
+			if(length($word)>=10)
+			{
+				$wlength{10}++;
+			}
+			else
+			{
+			$wlength{length($word)}++;
+			}
+			$wTotal++;
 			print "$word";
 			print "\n";
 		}
@@ -70,6 +80,11 @@ while(<STDIN>)
 print "$i";	
 print "INTERPUNCION:\n";
 my $tintpct;
+for my $key (keys %wlength)
+{
+	$wlength{$key}/=$wTotal;
+	print "$key=> $wlength{$key}\n";
+}
 for my $vals (values %intpunct)
 {
 	$tintpct=$tintpct+$vals;
