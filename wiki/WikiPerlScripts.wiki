@@ -14,7 +14,20 @@ This script provides the basic word counter and frequency calculation. Frequenci
   * word length frequency (_to be added_)
 
 
-
+=== Punctuation symbols frequency ===
+The punctuation symbols frequency is calculated by the fallowing formula:
+{{{
+FREQ_OF_SYMBOL=NO_OF_SYMBOL_IN_TEXT/NO_OF_ALL_SYMBOLS_IN_TEXT
+}}}
+The following symbols are counted:
+  * .
+  * ,
+  * !
+  * ?
+  * "
+  * -
+  * :
+  * ;
 === Run example ===
 If you want to use the script on `test.txt` for example (on windows machine):
 {{{
