@@ -11,7 +11,7 @@ This script provides the basic word counter and frequency calculation. Frequenci
   * punctuation symbols frequency
   * function words frequency (_to be added_)
   * function words group frequency (_to be added_)
-  * word length frequency (_to be added_)
+  * word length frequency
 
 
 === Punctuation symbols frequency ===
@@ -28,6 +28,12 @@ The following symbols are counted:
   * -
   * :
   * ;
+
+=== Word length frequency ===
+Word length is calculated for lengths from 1 to 10+ where 10+ stands for words with length of 10 characters and above. The frequency is calcuated using fallowing formula:
+{{{
+FREQ_OF_LENGTH=NO_OF_WORDS_WITH_LENGTH/TOTAL_NO_OF_WORDS
+}}}
 === Run example ===
 If you want to use the script on `test.txt` for example (on windows machine):
 {{{
