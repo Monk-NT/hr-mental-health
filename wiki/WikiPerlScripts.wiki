@@ -2,14 +2,21 @@
 
 = Introduction =
 
-This is a simple guide how to use provided perl scripts
+This is a simple guide how to use provided perl script
 
 
-= Word count script =
+= Counters and frequency script =
 
-For instance, we want to count all the words in text document "test.txt" and
-want it to be written to a "g.log" log file. We do that like this (on a windows machine):
+This script provides the basic word counter and frequency calculation. Frequencies calculated using this script are:
+  * punctuation symbols frequency
+  * function words frequency (_to be added_)
+  * function words group frequency (_to be added_)
+  * word length frequency (_to be added_)
 
+
+
+=== Run example ===
+If you want to use the script on `test.txt` for example (on windows machine):
 {{{
 perl wordCount.pl < test.txt > g.log
 }}} 
