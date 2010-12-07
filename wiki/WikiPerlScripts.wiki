@@ -36,7 +36,7 @@ FREQ_OF_LENGTH=NO_OF_WORDS_WITH_LENGTH/TOTAL_NO_OF_WORDS
 }}}
 
 === Function word frequency ===
-Function words are (as defined by [http://www.thefreedictionary.com/function+word The Free Dictionary):
+Function words are (as defined by [http://www.thefreedictionary.com/function+word The Free Dictionary]):
 {{{
 A word, such as a preposition, a conjunction, or an article, that has little semantic content of its own and chiefly indicates a grammatical relationship. Also called form word, functor.
 }}}
