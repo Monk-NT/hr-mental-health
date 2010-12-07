@@ -2,9 +2,16 @@
 
 %intpunct;
 %wlength;
+%fwords;
+open FILE, "data/functionWords.txt" or die $!;
+while(<FILE>)
+{	chomp($_);
+	$fwords{$_}=0;
+}
+
 while(<STDIN>)
 {
-	$line = $_;
+	$line = $_;                          
 	chomp($line);
 	@words=split(/ /,$line);
 	foreach $word (@words)
@@ -70,6 +77,13 @@ while(<STDIN>)
 			{
 			$wlength{length($word)}++;
 			}
+			for my $key (keys %fwords)
+			{
+				if(lc($key) eq lc($word))
+				{
+					$fwords{$key}++;
+				}
+			}
 			$wTotal++;
 			print "$word";
 			print "\n";
@@ -77,13 +91,11 @@ while(<STDIN>)
 	}
 	
 }
-print "$i";	
-print "INTERPUNCION:\n";
+
 my $tintpct;
 for my $key (keys %wlength)
 {
 	$wlength{$key}/=$wTotal;
-	print "$key=> $wlength{$key}\n";
 }
 for my $vals (values %intpunct)
 {
@@ -94,6 +106,11 @@ for my $key ( keys %intpunct)
 {
 	$intpunct{$key}/=$tintpct;
 	my $value = $intpunct{$key};
-	print "$key->";
-print"	$value\n";
+
+	
+}
+for my $key (keys %fwords)
+{
+	$fwords{$key}/=$wTotal;
+	print "$key : $fwords{$key}\n";
 }
