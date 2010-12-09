@@ -16,10 +16,10 @@ while(<STDIN>)
 	@words=split(/ /,$line);
 	foreach $word (@words)
 	{
-		#if word is a word
+		#if word is a word, bird is the word!
 		if($word=~m/^?[a-zA-Z]+?.$/)
 		{
-			
+				#check for punctionation marks
 				if($word=~m/.*\./)
 				{
 					$intpunct{"."}++;
@@ -69,6 +69,7 @@ while(<STDIN>)
 				}
 			
 			$i++;
+			#word length
 			if(length($word)>=10)
 			{
 				$wlength{10}++;
@@ -84,6 +85,7 @@ while(<STDIN>)
 					$fwords{$key}++;
 				}
 			}
+			#word total
 			$wTotal++;
 			print "$word";
 			print "\n";
