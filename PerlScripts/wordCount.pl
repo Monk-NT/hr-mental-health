@@ -87,23 +87,48 @@ while(<STDIN>)
 			}
 			#word total
 			$wTotal++;
-			print "$word";
-			print "\n";
 		}
 	}
 	
 }
+print "\@RELATION crazy-eddy\n\n";
+print "\@ATTRIBUTE word-lenght01 NUMERIC\n";
+print "\@ATTRIBUTE word-lenght02 NUMERIC\n";
+print "\@ATTRIBUTE word-lenght03 NUMERIC\n";
+print "\@ATTRIBUTE word-lenght04 NUMERIC\n";
+print "\@ATTRIBUTE word-lenght05 NUMERIC\n";
+print "\@ATTRIBUTE word-lenght06 NUMERIC\n";
+print "\@ATTRIBUTE word-lenght07 NUMERIC\n";
+print "\@ATTRIBUTE word-lenght08 NUMERIC\n";
+print "\@ATTRIBUTE word-lenght09 NUMERIC\n";
+print "\@ATTRIBUTE word-lenght10 NUMERIC\n";
+print "\@ATTRIBUTE punctiation-marks NUMERIC\n";
+for my $key (keys %fwords)
+{
+	$fwords{$key}/=$wTotal;
+	print "\@ATTRIBUTE function-words-$key NUMERIC\n";
+}
+
+print"\n\n\@DATA";
+
 
 my $tintpct;
 for my $key (keys %wlength)
 {
 	$wlength{$key}/=$wTotal;
+	if($wlenght{$key}=NULL)
+	{	print "0,";
+	}
+	else
+	{
+		print "$wlenght{key},";
+	}
 }
 for my $vals (values %intpunct)
 {
 	$tintpct=$tintpct+$vals;
 }
-
+print "$tintpct,";
 for my $key ( keys %intpunct)
 {
 	$intpunct{$key}/=$tintpct;
@@ -113,6 +138,5 @@ for my $key ( keys %intpunct)
 }
 for my $key (keys %fwords)
 {
-	$fwords{$key}/=$wTotal;
-	print "$key : $fwords{$key}\n";
+	print "$fwords{$key},";
 }
