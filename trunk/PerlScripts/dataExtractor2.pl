@@ -1,23 +1,22 @@
-#!/usr/bin/perl
-
-%intpunct;
-%wlength;
-%fwords;
-
+##!/usr/bin/perl
+%functionWords;
+$tPunctMarks;
+$wLen;
+$Fwords=0;
+%dWords;
 open FILE, "data/functionWords.txt" or die $!;
 while(<FILE>)
 {	chomp($_);
-	$fwords{$_}=0;
-	print "$_";
+	$functionWords{$_}=0;
 }
 close FILE;
-open FILE, ">>data.arff" or die $!;
+open FILE, ">>data2.arff" or die $!;
+
 while(<STDIN>){
 
 	$line = $_;                          
 	chomp($line);
 	@words=split(/ /,$line);
-	
 	foreach $word (@words){
 		
 		#if word is a word, bird is the word!
@@ -30,85 +29,78 @@ while(<STDIN>){
 			wordLen($word);
 			
 			#function words
-			functionW($words);
+			functionW($word);
 			
+			#different words
+			diffWords($word);
 			#word total
 			$wTotal++;
+			
 		}
 	}
 }
 
 printAll();
+close FILE;
 
-#subroutine checks if punctiation marks exist in the word.
 sub punctmarks
 {
 	if($_[0]=~m/.*\./){
-		$intpunct{"."}++;				
+		$tPunctMarks++;				
 	}
 	if($_[0]=~m/.!/){
-		$intpunct{"!"}++;
+		$tPunctMarks++;
 	}
 	if($_[0]=~m/.\?/){
-		$intpunct{"?"}++;
+		$tPunctMarks++;
 	}
 	if($_[0]=~m/.,/){
-		$intpunct{","}++;
+		$tPunctMarks++;
 	}
 	if($_[0]=~m/.;/){
-		$intpunct{";"}++;
+		$tPunctMarks++;
 	}
 	if($_[0]=~m/.:/){
-		$intpunct{":"}++;
+		$tPunctMarks++;
 	}
 	if($_[0]=~m/.-/){
-		$intpunct{"-"}++;
+		$tPunctMarks++;
 	}
 }
 #subroutine counts words with the same length
 sub wordLen
 {
-	if(length($_[0])>=10){
-		$wlength{10}++;
-	}
-	else{
-		$wlength{length($_[0])}++;
-	}
+	$wLen+=length($_[0]);
 }
 #subroutine counts function words
 sub functionW
 {
-	for my $key (keys %fwords){
+	for my $key (keys %functionWords){
 		if(lc($key) eq lc($_[0])){
-			$fwords{$key}++;
+			$Fwords++;
 		}
 	}
+}
+#subroutine counts different words
+sub diffWords
+{
+	$dWords{$_[0]}++;
 }
 #subroutine does final calculations and prints output
 sub printAll
 {
 	my $tintpct;
 	print FILE "\n";
-	for my $key (keys %wlength){
-		$wlength{$key}/=$wTotal;
-		
-		if(defined($wlength{$key})){
-			print FILE "$wlength{$key},";
-		}
-		else{
-			print FILE "0,";
-		}
-	}
-	for my $vals (values %intpunct){
-		$tintpct=$tintpct+$vals;
-	}
-
-	for my $key ( keys %intpunct){
-		$intpunct{$key}/=$tintpct;
-		print FILE "$intpunct{$key},";
-	}
-	for my $key (keys %fwords){
-		$fwords{$key}/=$wTotal;
-		print FILE "$fwords{$key},";
-	}
+	
+	$wLen/=$wTotal;
+	print FILE "$wLen, ";
+	print FILE "$tPunctMarks, ";
+	$Fwords/=$wTotal;
+	print FILE "$Fwords, ";
+	
+	$i +=scalar keys %dWords;
+	print scalar keys (%dWords);
+	$diffWordsT=$i / $wTotal;
+	print FILE "$diffWordsT";
+	
 }
