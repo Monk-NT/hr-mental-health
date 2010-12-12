@@ -1,0 +1,2 @@
+NASLOV:TEHNIČKA DOKUMENTACIJA
+Sustav je izgrađen od 2 dijela, gdje se prvi dio koristi za prikupljanje podataka i sastoji se od jednostavne perl skripte, dok drugi dio koristi dane podatake (pripremljenih u posebnu arff (attribute relation file format) datoteku) i  pomoću alata Weka vrši učenje i klasifikaciju.
