@@ -10,7 +10,13 @@
 @ATTRIBUTE word-lenght08 NUMERIC
 @ATTRIBUTE word-lenght09 NUMERIC
 @ATTRIBUTE word-lenght10 NUMERIC
-@ATTRIBUTE punctiation-marks NUMERIC
+@ATTRIBUTE punctiation-marks-dot NUMERIC
+@ATTRIBUTE punctiation-marks-exc NUMERIC
+@ATTRIBUTE punctiation-marks-qmark NUMERIC
+@ATTRIBUTE punctiation-marks-comma NUMERIC
+@ATTRIBUTE punctiation-marks-semic NUMERIC
+@ATTRIBUTE punctiation-marks-colon NUMERIC
+@ATTRIBUTE punctiation-marks-dash NUMERIC
 @ATTRIBUTE function-words-around NUMERIC
 @ATTRIBUTE function-words-worth NUMERIC
 @ATTRIBUTE function-words-along NUMERIC
@@ -108,6 +114,4 @@
 @ATTRIBUTE function-words-until NUMERIC
 @ATTRIBUTE function-words-as NUMERIC
 
-
-
-@DATA0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+@DATA
