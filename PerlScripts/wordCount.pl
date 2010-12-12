@@ -39,12 +39,6 @@ while(<STDIN>)
 					$intpunct{"?"}++;
 					
 				}
-				if($word=~m/.!/)
-				{
-					
-					$intpunct{"!"}++;
-					
-				}
 				if($word=~m/.,/)
 				{
 					
@@ -74,10 +68,13 @@ while(<STDIN>)
 			if(length($word)>=10)
 			{
 				$wlength{10}++;
+				print "10+ ";
 			}
 			else
 			{
-			$wlength{length($word)}++;
+				$wlength{length($word)}++;
+				print " ";
+				print length($word);
 			}
 			for my $key (keys %fwords)
 			{
@@ -98,30 +95,30 @@ for my $key (keys %fwords)
 	$fwords{$key}/=$wTotal;
 }
 
-print FILE "\n\n\@DATA";
+print FILE "\n";
 
 
 my $tintpct;
 for my $key (keys %wlength)
 {
 	$wlength{$key}/=$wTotal;
-	if($wlenght{$key}=NULL)
-	{	print FILE "0,";
-	}
-	else
-	{
-		print FILE "$wlenght{key},";
-	}
+	
+		if(defined($wlength{$key}))
+			{print FILE "$wlength{$key},";}
+		else
+			{print FILE "0,";}
+	
 }
 for my $vals (values %intpunct)
 {
 	$tintpct=$tintpct+$vals;
 }
-print FILE "$tintpct,";
+
 for my $key ( keys %intpunct)
 {
 	$intpunct{$key}/=$tintpct;
 	my $value = $intpunct{$key};
+	print FILE "$value,";
 
 	
 }
