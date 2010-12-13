@@ -4,3 +4,22 @@ Perl skripta se sastoji od idućih pod rutina:
 1) pod rutine za ekstrakciju podataka o funkcijskim riječima
 2) pod rutine za ekstrakciju podataka o interpunkcijskim znakovima
 3) pod rutine za ekstrakciju podataka o dužini riječi
+4) pod rutine za ekstrakciju podataka o zamjenicama.
+
+PODNASLOV: EKSTRAKCIJA PODATAKA O FUNKCIJSKIM RIJEČIMA
+Funkcijske riječi su riječi koje (//definicija//)
+Podatak o funkcijskim riječima je zapravo njihova frekvencija pojavljivanja u tekstu. Oni se računaju prema formuli: $f_fw=N_fw/N_w$ gdje je f_fw frekvencija, N_fw broj funkcijskih riječi, a N_w broj svih riječi u tekstu. Broj funkcijskih riječi dobivamo provjerom svake riječi teksta s listom funkcijskih riječi koja je prethodno pripremljena i nalazi se u datoteci #data/functionWords.txt#. Naravno, nemoguće je uključiti sve funkcijske riječi, pa je lista ručno sastavljena od najčećšćih funkcijskih riječi.
+
+PODNASLOV: EKSTRAKCIJA PODATAKA O INTERPUNKCIJSKIH ZNAKOVIMA
+Interpunkcijskih znakovi su znakovi koji indiciraju strukturu i organizaciju pisanog jezika, kao i intonaciju i pauze koje treba primjeniti prilikom čitanja na glas.
+Interpunkcijski znakovi koji se koriste u ovom programu su # točka (.), zarez (,), dvotočje (:), točka-zarez (;), crtica (-), apostrof ('), znakovi navoda ("), upitnik (?) i uskličnik (!).
+Podatak o interpunkcijskim znakovima je broj njihovih pojavljivanja u tekstu. //Pretpostavka je da će ljudi s mentalnim poteškoćama imati čudniju strukturu teksta (ili jako veliki broj interpunkcijskih znakova ili jako mali broj interpunkcijskih znakova), na temlju istraživanja (quote xy?)//
+
+PODNASLOV: EKSTRAKCIJA PODATAKA O DUŽINI RIJEČI
+Na temelju istraživanja (//quote xy, zy, itd, sonja valjda zna//) je primjećeno da osobe s određenim tipom mentalnih bolesti (bipolarni, shizofrenija?) koriste duže i kompliciranije riječi, dakle vokabular im je širi (//?//). Stoga koristimo prosječnu dužinu riječi u tekstu kao jedan od podataka potrebnih za klasifikaciju.
+Podatak o dužini riječi je srednja vrijednost dužina svih riječi i računa se prema formuli:$m_wl=SUM(wl_i)/N_w$ gdje je m_wl srednja vrijednost dužine riječi, wl_i je dužina i-te riječi, a N_w broj svih riječi u tekstu.
+
+PODNASLOV: EKSTRAKCIJA PODATAKA O ZAMJENICA
+Na temelju istraživanja (//quote xy, zy, itd, valjda sonja zna//) je primjećeno da osobe s određenim mentalnim poteškoćama često stavljaju sebe u centar, dakle često koriste zamjenice za prvo lice jednine (I, me, myself).
+Podatak o zamjenicama je postotak njihovog pojavljivanja u tekstu, specifičnije, pojavljivanje navedenih zamjenica za prvo lice jednine i računa se prema formuli. $f_p=N_p/N_w$ gdje je f_p postotak zamjenica u riječima u tekstu, N_p broj pojavljivanja zamjenica u tekstu, a N_w broj svih riječi u tekstu.
+Važno je primjetiti da zamjenice također spadaju u funkcijske riječi, stoga je ovo specijalizacija podataka o funkcijskim riječima i grupiranja na točno određenu grupu.
