@@ -1,47 +1,97 @@
-\documentclass[a4paper]{article}
-\usepackage{times}
-\usepackage[utf8]{inputenc}
+% Predložak za izradu rada za konferenciju SU2010
+% (C) 2010 Jan Šnajder
+% KTLab, FER
+
+\documentclass[10pt, a4paper]{article}
+
+\usepackage{su2010}
+
 \usepackage[croatian]{babel}
-\usepackage[T1]{fontenc}
-\usepackage{fullpage}
-\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{booktabs}
 \usepackage{amsmath}
-\usepackage {amsfonts}
-\usepackage{amsthm}
+\usepackage{amssymb}
 
-
-\newcommand{\eng}[1]{(engl. \textit{#1})}
 \title{Something Something DARK SIDE}
-\date{\today}
-\author{Sonja Grđan \and Veljko Srdarević}
+
+%VAŽNO: Zakomentirajte sljedeću liniju kada šaljete rad na recenziju
+\name{Sonja Grđan, Veljko Srdarević} 
+
+\address{
+Sveučilište u Zagrebu, Fakultet elektrotehnike i računarstva\\
+Unska 3, 10000 Zagreb, Hrvatska\\ 
+\texttt{monk.nt@gmail.hr}, \texttt{mourningrise@gmail.com}\\
+}
+          
+         
+\abstract{ sažetak}
+
 \begin{document}
-\maketitle
-\tableofcontest
-\section{Uvod i motivacija}
-Mentalni poremećaji zanimljivo su područje proučavanja u kognitivnoj znanosti budući da nude mogućnost uvida u drugačije funkcioniranje mozga. 
-Shizofrenija se ističe sveobuhvatnošću mentalnih funkcija koje zahvaća, od čega ističemo promjene u mišljenju koje se očituju kao brzo skakanje misli s ideje na ideju, 
-bez jasne povezanosti, "ljepljivost" misli za jednu ideju i njeno teško mijenjanje, izmišljanje riječi i slično. 
-Bipolarni poremećaj primarno je poremećaj raspoloženja, no također može utjecati na kognitivne funkcije kao što su pažnja i verbalno pamćenje, 
-a dobivena je i povezanost sa kreativnošću. Navedene karakteristike oboljelih od ovih bolesti mogu se očitovati i u njihovom tekstualnom izričaju, 
-što u usporedbi sa tekstovima mentalno zdravih osoba otvara mogućnost automatskog kategoriziranja takvih tekstova. 
-Dijagnosticiranje mentalnih bolesti zahtjevan je problem, 
-pa bi izrada sustava koji procjenjuje pripadnost nekog teksta kategorijama bolesti i zdravlja mogla pružiti korisne dodatne informacije za dijagnostičare. 
-Cilj rada stoga je izraditi klasifikator tekstova dobivenih od sudionika različitog mentalnog stanja (psihički zdravi, shizofreni sudionici i sudionici s bipolarnim poremećajem). 
-Svrha rada je provjeriti jesu li karakteristike navedenih mentalnih poremećaja dovoljno izražene na tekstovima psihički bolesnih sudionika da bi se oni razlikovali od tekstova 
-psihički zdravih sudionika, te, ukoliko jesu, doprinijeti postupku dijagnostike.
-\section{2}
-\section{3}
-\section{4}
-\section{5}
+
+\maketitleabstract
+
+\section{Uvod}
+
+Mentalni poremećaji zanimljivo su područje proučavanja u kognitivnoj znanosti budući da nude mogućnost uvida u drugačije funkcioniranje mozga. Shizofrenija se ističe sveobuhvatnošću mentalnih funkcija koje zahvaća, od čega ističemo promjene u mišljenju koje se očituju kao brzo skakanje misli s ideje na ideju, bez jasne povezanosti, "ljepljivost" misli za jednu ideju i njeno teško mijenjanje, izmišljanje riječi i slično. Bipolarni poremećaj primarno je poremećaj raspoloženja, no također može utjecati na kognitivne funkcije kao što su pažnja i verbalno pamćenje, a dobivena je i povezanost sa kreativnošću. Navedene karakteristike oboljelih od ovih bolesti mogu se očitovati i u njihovom tekstualnom izričaju, što u usporedbi sa tekstovima mentalno zdravih osoba otvara mogućnost automatskog kategoriziranja takvih tekstova. 
+
+Dijagnosticiranje mentalnih bolesti zahtjevan je problem, pa bi izrada sustava koji procjenjuje pripadnost nekog teksta kategorijama bolesti i zdravlja mogla pružiti korisne dodatne informacije za dijagnostičare. Cilj rada stoga je izraditi klasifikator tekstova dobivenih od sudionika različitog mentalnog stanja (psihički zdravi, shizofreni sudionici i sudionici s bipolarnim poremećajem). Svrha rada je provjeriti jesu li karakteristike navedenih mentalnih poremećaja dovoljno izražene na tekstovima psihički bolesnih sudionika da bi se oni razlikovali od tekstova psihički zdravih sudionika, te, ukoliko jesu, doprinijeti postupku dijagnostike.
+
+\section{Drugi odjeljak}
+
+Ovo je drugi odjeljak.
+
+\subsection{Prvi pododjeljak}
+\label{sec:prvi}
+
+
+
+\subsection{Drugi pododjeljak}
+
+
+
+
+\subsection{Primjer pododjeljka s dugačkim naslovom koji prelazi u
+drugi redak}
+
+
+
+\section{Veličina rada}
+
+
+
 \subsection{Obrada teksta}
+
+
+
 Obrada teksta je izvršena pomoću skripte pisane u programskom jeziku perl. Obrada teksta se sastoji od izvlačenja određenog broja mjera koje se poslije koriste za daljnu obradu teksta.
 Mjere koje se izvlače su:
 \begin{enumerate}
-\item Frekvencija pojavljivanja funkcijskih riječi u tekstu u odnosu na broj svih riječi u tekstu
-\item Frekvencija pojavljivanja interpunkcijskih znakova u odnosu na dužinu teksta.
-\item Frekvencija pojavljivanja zamjenica za prvo lice jednine u odnosu na broj svih riječi u tekstu
-\item Postotak različitih riječi u tekstu
-\item Prosječna dužina riječi u tekstu
+\item Frekvencija pojavljivanja funkcijskih riječi u tekstu u odnosu na broj svih riječi u tekstu,
+\item Frekvencija pojavljivanja interpunkcijskih znakova u odnosu na dužinu teksta,
+\item Frekvencija pojavljivanja zamjenica za prvo lice jednine u odnosu na broj svih riječi u tekstu,
+\item Postotak različitih riječi u tekstu,
+\item Prosječna dužina riječi u tekstu.
 \end{enumerate}
+
+
+
+
+
+\section{Pozdravi i glazbene želje}
+
 \emph{fale qouteove, qouth the Raven, "Nevermore", jel imamo EAPa?}
+
+\
+
+\section{Zaključak}
+
+Rad je super.
+
+
+
+\bibliographystyle{su2010}
+\bibliography{su2010} 
+
 \end{document}
+
