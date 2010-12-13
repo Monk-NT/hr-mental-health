@@ -1,0 +1,11 @@
+1. kratka motivacija - saznavanje o poremeæajima i dijagnostika (iz summary)
+2. o poremeæajima i kak bi se sve mogli vidjet u pisanju
+3. dosadašnja istraživanja slièna (iz summary samo detaljnije)
+4. o znaèajkama i izboru znaèajki (eksploratorno za dužinu rijeèi, broj razlièitih rijeèi zbog kreativnosti, kvaliteta teksta s F mjerom itd.)
+5. glavni dijelovi projekta (može i dijagram)
+   a) prikupljanje tekstova - izvorno engleski, pisci i blogovi, nebolesni po najveæoj izglednosti
+   b) obrada teksta
+   c) obrada u weki
+6. razlièite metode koje koristimo u weki (decision tree, svm, može bayes i clustering možda?)
+7. rezultati
+8. zakljuèak  (ak nismo niš dobili super jer su zdravi tj ne utjeèe im bolest tolko na zdravlje) - za ubuduce probat s pacijentima u akutnoj fazi bolesti, s tekstovima koji su na istu temu, koji nemaju previsok skill pisanja)
