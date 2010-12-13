@@ -1,5 +1,7 @@
 ##!/usr/bin/perl
 %functionWords;
+%pronouns;
+$pronounC;
 $tPunctMarks;
 $wLen;
 $Fwords=0;
@@ -8,6 +10,12 @@ open FILE, "data/functionWords.txt" or die $!;
 while(<FILE>)
 {	chomp($_);
 	$functionWords{$_}=0;
+}
+close FILE;
+open FILE, "data/pronouns.txt" or die $!;
+while(<FILE>)
+{	chomp($_);
+	$pronouns{$_}=0;
 }
 close FILE;
 open FILE, ">>data2.arff" or die $!;
@@ -22,15 +30,16 @@ while(<STDIN>){
 		#if word is a word, bird is the word!
 		if($word=~m/^?[a-zA-Z]+?.$/){
 			
-			#check for punctionation marks
-			punctmarks($word);
+			#check for punctionation marks, and remove them if exist
+			$word=punctmarks($word);
 			
 			#word length
-			wordLen($word);
+			wordLength($word);
 			
 			#function words
 			functionW($word);
-			
+			#pronouns
+			pronounsCount($word);
 			#different words
 			diffWords($word);
 			#word total
@@ -43,32 +52,50 @@ while(<STDIN>){
 printAll();
 close FILE;
 
+#subroutine checks for punctuation marks and removes them,
+#except in cases of:
+#dash
+#apostrophe
 sub punctmarks
 {
 	if($_[0]=~m/.*\./){
-		$tPunctMarks++;				
+		$tPunctMarks++;
+		$_[0]=chop($_[0]);
 	}
 	if($_[0]=~m/.!/){
 		$tPunctMarks++;
+		$_[0]=chop($_[0]);
 	}
 	if($_[0]=~m/.\?/){
 		$tPunctMarks++;
+		$_[0]=chop($_[0]);
 	}
 	if($_[0]=~m/.,/){
 		$tPunctMarks++;
+		$_[0]=chop($_[0]);
 	}
 	if($_[0]=~m/.;/){
 		$tPunctMarks++;
+		$_[0]=chop($_[0]);
 	}
 	if($_[0]=~m/.:/){
 		$tPunctMarks++;
+		$_[0]=chop($_[0]);
 	}
 	if($_[0]=~m/.-/){
 		$tPunctMarks++;
 	}
+	if($_[0]=~m/.'/){
+		$tPunctMarks++;
+	}
+	if($_[0]=~m/."/){
+		$tPunctMarks++;
+		$_[0]=~ s/."//;
+	}
+	$_[0];
 }
 #subroutine counts words with the same length
-sub wordLen
+sub wordLength
 {
 	$wLen+=length($_[0]);
 }
@@ -78,6 +105,14 @@ sub functionW
 	for my $key (keys %functionWords){
 		if(lc($key) eq lc($_[0])){
 			$Fwords++;
+		}
+	}
+}
+sub pronounsCount
+{
+	for my $key(keys %pronouns){
+		if(lc($key) eq lc ($_[0])){
+			$pronounC++;
 		}
 	}
 }
@@ -97,9 +132,9 @@ sub printAll
 	print FILE "$tPunctMarks, ";
 	$Fwords/=$wTotal;
 	print FILE "$Fwords, ";
-	
+	$pronounC/=$wTotal;
+	print FILE "$pronounC, ";
 	$i +=scalar keys %dWords;
-	print scalar keys (%dWords);
 	$diffWordsT=$i / $wTotal;
 	print FILE "$diffWordsT";
 	
