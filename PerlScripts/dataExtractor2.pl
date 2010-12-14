@@ -19,7 +19,6 @@ while(<FILE>)
 }
 close FILE;
 open FILE, ">>data2.arff" or die $!;
-
 while(<STDIN>){
 
 	$line = $_;                          
@@ -126,11 +125,13 @@ sub diffWords
 #subroutine does final calculations and prints output
 sub printAll
 {
-	my $tintpct;
+	
+	
 	print FILE "\n";
 	
 	$wLen/=$wTotal;
 	print FILE "$wLen, ";
+	$tPunctMarks/=$wTotal;
 	print FILE "$tPunctMarks, ";
 	$Fwords/=$wTotal;
 	print FILE "$Fwords, ";
