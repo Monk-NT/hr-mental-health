@@ -58,7 +58,8 @@ Veličina uzorka: ????
 
 
 \section{Značajke teksta}
-
+%quoth the server, nevermore : http://wordnetweb.princeton.edu/perl/webwn?s=function word
+Funkcijske riječi \engl{function words} su zatvoreni razred neinfleksijskih riječi koje ne nose značajno značenje i vrše neku gramatičku funkciju. Takve riječi su u engleskom jeziku prilozi, prijedlozi, odrednice, veznici, modalni glagoli, pomoćni glagoli i čestice.
 
 
 \section{Izvedba ili slično}
@@ -68,8 +69,8 @@ dijagram
 
 
 
-Obrada teksta je izvršena pomoću skripte pisane u programskom jeziku perl. Obrada teksta se sastoji od izvlačenja određenog broja mjera koje se poslije koriste za daljnu obradu teksta.
-Mjere koje se izvlače su:
+Obrada teksta je izvršena pomoću skripte pisane u programskom jeziku perl. Obrada teksta se sastoji od izvlačenja određenog broja značajki koje se poslije koriste za daljnu obradu teksta.
+značajke koje se izvlače su:
 \begin{enumerate}
 \item Frekvencija pojavljivanja funkcijskih riječi u tekstu u odnosu na broj svih riječi u tekstu,
 \item Frekvencija pojavljivanja interpunkcijskih znakova u odnosu na dužinu teksta,
@@ -77,6 +78,17 @@ Mjere koje se izvlače su:
 \item Postotak različitih riječi u tekstu,
 \item Prosječna dužina riječi u tekstu.
 \end{enumerate}
+Potrebno je napomenuti da nisu korišteni svi postojeći interpunkcijski znakovi znakovi engleskog jezika, već nešto manja grupa koja se sastoji od:
+\begin{itemize}
+\item točke (.),
+\item upitnika (?),
+\item uskličnika (!),
+\item zareza (,),
+\item dvotočja (:),
+\item točke-zareza (;),
+\item apostrofa (').
+\end{itemize}
+Može se primjetiti da nismo koristili znakove navoda, kao ni crticu zbog različite forme navođenja teksta među autorima.
 
 \subsection{Obrada podataka}
 
