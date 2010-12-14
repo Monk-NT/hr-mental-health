@@ -21,7 +21,7 @@
 \address{
 Sveučilište u Zagrebu, Fakultet elektrotehnike i računarstva\\
 Unska 3, 10000 Zagreb, Hrvatska\\ 
-\texttt{monk.nt@gmail.hr}, \texttt{mourningrise@gmail.com}\\
+\texttt{\{sonja.grdan,veljko.srdarevic\}@fer.hr}\\
 }
           
          
@@ -37,30 +37,32 @@ Mentalni poremećaji zanimljivo su područje proučavanja u kognitivnoj znanosti
 
 Dijagnosticiranje mentalnih bolesti zahtjevan je problem, pa bi izrada sustava koji procjenjuje pripadnost nekog teksta kategorijama bolesti i zdravlja mogla pružiti korisne dodatne informacije za dijagnostičare. Cilj rada stoga je izraditi klasifikator tekstova dobivenih od sudionika različitog mentalnog stanja (psihički zdravi, shizofreni sudionici i sudionici s bipolarnim poremećajem). Svrha rada je provjeriti jesu li karakteristike navedenih mentalnih poremećaja dovoljno izražene na tekstovima psihički bolesnih sudionika da bi se oni razlikovali od tekstova psihički zdravih sudionika, te, ukoliko jesu, doprinijeti postupku dijagnostike.
 
-\section{Drugi odjeljak}
+\section{Dosadašnja istraživanja}
+Strous et al [1] radili su automatsku klasifikaciju tekstova na temu \emph{Važna osoba u mom životu}, koje su napisali 36 shizofrenih sudionika nasuprot 36 ne-shizofrenih sudionika, pomoću stroja s potpornim vektorima \engl{support vector machine, SVM} i Bayesove regresije. Korištene se značajke najčešćih riječi, tri-grama slova (zbog specifičnosti hebrejskog jezika u kojima su gramatički značajni) i ponavljanje riječi, te je dobivena uspješnost klasifikacije tekstova 83,3%.
 
-Ovo je drugi odjeljak.
-
-\subsection{Prvi pododjeljak}
-\label{sec:prvi}
-
-
-
-\subsection{Drugi pododjeljak}
+Diederich et al [2] kao skup za učenje koristili su tekstove 31 shizofrenog i 16 maničnih pacijenata psihijatrijske ustanove i 9 kontrolnih sudionika, koji su bilo verbalizirali tekst koji je kasnije pretipkan, bilo sami napisali tekst. Tekstovi su bili pisani na jednu od dvije zadane teme (\emph{piknik u parku} i \emph{lopov}) uz zadatak da se u tekst ukomponira unaprijed određena lista riječi. Tekstovi su pretvoreni u ?????? \engl{bag of words} oblik i korištena je frekvencija riječi, a učenje je izvedeno pomoću SVM i stabla odluke. Uspješnost klasifikacije shizofrene nasuprot kontrolne skupine bila je 77%, dok u klasifikaciji koja je uključivala manične sudionike uspješnost nije bila bolja od slučajne. 
 
 
 
 
-\subsection{Primjer pododjeljka s dugačkim naslovom koji prelazi u
-drugi redak}
+\subsection{Uzorak}
+Uzorke čine tekstovi poznatih pisaca engleskog govornog područja i tekstovi prikupljeni sa blogova. Psihički poremećaji kod pisaca (ili odsudnost istih) identificirani su detaljnom analizom njihovih dostupnih biografija, te su u uzorak uzeti oni tekstovi koji se bave upravo autorovim osvrtom na psihičku bolest (ukoliko takvi postoje) ili su pisani u vremenskom razdoblju najbližem onom u kojem je poremećaj identificiran. Tekstovi pisaca koji ne pate od depresije, bipolarnog poremećaja ili shizofrenije odabrani su prema dostupnosti.
+
+Blogovi autora koji imaju neki psihički poremećaj pronađeni su preko web-stranica koje se bave tim poremećajima \footnote{npr.~\texttt{www.psychologytoday.com},\texttt{ www.schizophrenia.com}} i na njima se autori deklariraju kao oboljeli od određenog poremećaja (bipolarni, shizofrenija). Blogovi psihički zdravih autora ????????????????. Svi blogovi bave se osobnim doživljajima autora i pisani su u prvom licu. U slučaju da autor bloga piše samo kratke zabilješke, spojeno je nekoliko zabilješki u jedan tekst (budući da tekstove pokušavamo klasificirati prema značajkama stila, a ne sadržaja).
+ 
+Dužina teksta varirala je od ???? do ????, a u prosjeku iznosila ?????. Sve značajke određivane su uzimajući u obzir duljinu teksta. 
+
+Veličina uzorka: ????
 
 
 
-\section{Veličina rada}
 
+\section{Značajke teksta}
 
+\section{Izvedba ili slično}
+dijagram
 
-\subsection{Obrada teksta}
+\subsection{Pretprocesiranje: obrada teksta}
 
 
 
@@ -74,15 +76,19 @@ Mjere koje se izvlače su:
 \item Prosječna dužina riječi u tekstu.
 \end{enumerate}
 
+\subsection{Obrada podataka}
 
+\section{Rezultati}
 
+\section{Buduća istraživanja}
+U budućim istraživanjima bilo bi dobro koristiti tekstove za koje pouzdano znamo da su ih autori pisali u akutnoj fazi svoje bolesti, kada su kognitivne funkcije najviše pogođene, čime bi se povećala izglednost dobivanja uspješnijeg razlikovanja među tekstovima. Također, bilo bi dobro koristiti tekstove koji su pisani na istu temu (na tragu korištenja osobnih blogova), kako bi se smanjila mogućnost da semantički kontekst utječe na rezultate. Osim toga moglo bi se kontrolirati vještinu pisanja autora tekstova koristeći autore koji nisu izrazito vješti u tome kao što su profesionalni pisci, te koristiti nezavisne procjene stručnjaka za određivanje kvalitete teksta.
 
 
 \section{Pozdravi i glazbene želje}
 
 \emph{fale qouteove, qouth the Raven, "Nevermore", jel imamo EAPa?}
 
-\
+
 
 \section{Zaključak}
 
