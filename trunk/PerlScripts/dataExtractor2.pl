@@ -38,6 +38,7 @@ while(<STDIN>){
 			
 			#function words
 			functionW($word);
+			
 			#pronouns
 			pronounsCount($word);
 			#different words
@@ -60,27 +61,28 @@ sub punctmarks
 {
 	if($_[0]=~m/.*\./){
 		$tPunctMarks++;
-		$_[0]=chop($_[0]);
+		$_[0]=~ s/\.//;
 	}
 	if($_[0]=~m/.!/){
 		$tPunctMarks++;
-		$_[0]=chop($_[0]);
+		$_[0]=~ s/!//;
+		
 	}
 	if($_[0]=~m/.\?/){
 		$tPunctMarks++;
-		$_[0]=chop($_[0]);
+		$_[0]=~ s/\?//;
 	}
 	if($_[0]=~m/.,/){
 		$tPunctMarks++;
-		$_[0]=chop($_[0]);
+		$_[0]=~ s/,//;
 	}
 	if($_[0]=~m/.;/){
 		$tPunctMarks++;
-		$_[0]=chop($_[0]);
+		$_[0]=~ s/;//;
 	}
 	if($_[0]=~m/.:/){
 		$tPunctMarks++;
-		$_[0]=chop($_[0]);
+		$_[0]=~ s/://;
 	}
 	if($_[0]=~m/.-/){
 		$tPunctMarks++;
@@ -88,9 +90,9 @@ sub punctmarks
 	if($_[0]=~m/.'/){
 		$tPunctMarks++;
 	}
-	if($_[0]=~m/."/){
-		$tPunctMarks++;
-		$_[0]=~ s/."//;
+	if($_[0]=~m/.?"/){
+		#$tPunctMarks++;
+		$_[0]=~ s/"//;
 	}
 	$_[0];
 }
