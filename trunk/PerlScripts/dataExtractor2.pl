@@ -88,6 +88,9 @@ sub punctmarks
 	}
 	if($_[0]=~m/.'/){
 		$tPunctMarks++;
+		if($_[0]=m/I'm/i){
+			$_[0]="I";
+			}
 	}
 	if($_[0]=~m/.?"/){
 		#$tPunctMarks++;
@@ -139,6 +142,8 @@ sub printAll
 	print FILE "$pronounC, ";
 	$i +=scalar keys %dWords;
 	$diffWordsT=$i / $wTotal;
-	print FILE "$diffWordsT";
+	print FILE "$diffWordsT,";
+	
+	print FILE "schi";
 	
 }
