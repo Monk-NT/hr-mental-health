@@ -18,7 +18,7 @@ while(<FILE>)
 	$pronouns{$_}=0;
 }
 close FILE;
-open FILE, ">>data2.arff" or die $!;
+open FILE, ">>test.txt" or die $!;
 while(<STDIN>){
 
 	$line = $_;                          
@@ -144,6 +144,6 @@ sub printAll
 	$diffWordsT=$i / $wTotal;
 	print FILE "$diffWordsT,";
 	
-	print FILE "norm";
+	print FILE "schi";
 	
 }
