@@ -5,7 +5,7 @@
 @ATTRIBUTE broj-funkc-rijeci NUMERIC
 @ATTRIBUTE broj-zamjenica NUMERIC
 @ATTRIBUTE broj-razl-rijeci NUMERIC
-@ATTRIBUTE psih-bolest {bip,schi,norm,depr}
+@ATTRIBUTE psih-bolest {bip,depr}
 
 @DATA
 4.28305932809149, 0.147248034310222, 0.147962830593281, 0.0157255182273052, 0.437455325232309,bip
