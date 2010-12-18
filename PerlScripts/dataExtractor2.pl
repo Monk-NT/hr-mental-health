@@ -12,13 +12,13 @@ while(<FILE>)
 	$functionWords{$_}=0;
 }
 close FILE;
-open FILE, "data/pronouns.txt" or die $!;
+open FILE, "data/pronouns.txt" or die $!;	
 while(<FILE>)
 {	chomp($_);
 	$pronouns{$_}=0;
 }
 close FILE;
-open FILE, ">>test.txt" or die $!;
+open FILE, ">>data-blog-x3-train.arff" or die $!;
 while(<STDIN>){
 
 	$line = $_;                          
