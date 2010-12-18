@@ -18,7 +18,7 @@ while(<FILE>)
 	$pronouns{$_}=0;
 }
 close FILE;
-open FILE, ">>data-blog-x3-train.arff" or die $!;
+open FILE, ">>data-pisci-x2-train.arff" or die $!;
 while(<STDIN>){
 
 	$line = $_;                          
