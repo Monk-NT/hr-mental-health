@@ -144,6 +144,6 @@ sub printAll
 	$diffWordsT=$i / $wTotal;
 	print FILE "$diffWordsT,";
 	
-	print FILE "schi";
+	print FILE "bip";
 	
 }
