@@ -145,7 +145,50 @@ SVM & rezultat\\
 \end{center}
 \end{table*}
 
-Može se primjetiti da rezultati 
+\begin{table*}
+\caption{Postotci točno klasificiranih primjera na različitim metodama u slučaju klasifikacije na samo dvije klase na skupu blogova}
+\label{lab:rezultatiBlogGrupa}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Grupe & Metoda & Točno klasificiranih\\
+\midrule
+Normalni, schizofreni & Bayes & 81.48\%\\
+ & Bayes s procjenom jezgrene funkc. & 70.37\%\\
+ & SVM & 62.00\%\\
+Bipolarni, schizofreni & Bayes & 70.37\%\\
+ & Bayes s procjenom jezgrene funkc. & 62.96\%\\
+ & SVM & 59.00\%\\
+Bipolarni, normalni & Bayes & 66.67\%\\
+ & Bayes s procjenom jezgrene funkc. & 66.67\%\\
+ & SVM & 46.60\%\\
+ \bottomrule
+ \end{tabular}
+ \end{center}
+ \end{table*}
+\begin{table*}
+\caption{Postotci točno klasificiranih primjera na različitim metodama u slučaju klasifikacije na samo dvije klase na skupu pisaca}
+\label{tab:rezultPisciGrupa}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Grupe & Metoda & Točno klasificiranih\\
+\midrule
+Depresivni, normalni & Bayes & 60.00\%\\
+ & Bayes s procjenom jezgrene funkc. & 70.00\%\\
+ & SVM & 67.4\%\\
+Bipolarni, normalni & Bayes & 64.50\%\\
+ & Bayes s procjenom jezgrene funkc. & 67.74\%\\
+ & SVM & 67.70\%\\
+Bipolarni, depresivni & Bayes & 66.67\%\\
+ & Bayes s procjenom jezgrene funkc. & 76.66\%\\
+  & SVM & 60.00\%\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table*}
+
+Neke zanimljive činjenice proizlaze iz rezultata za Bayesov klasifikator i Bayesov klasifikator s procjenom jezgrene funkcije. Iz podataka se vidi da korištenje procjene jezgrene funkcije ima daleko više smisla 
 
 Neuspjeh izrade automatskog klasifikatora mentalnog statusa autora tekstova u ovom radu u konačnici ima optimističnu notu: s obzirom da su tekstovi uzeti od autora koji imaju dijagnozu, no u vrijeme pisanja tekstova najvjerojatnije nisu bili u akutnoj fazi bolesti, moguće je da utjecaj bolesti van akutne faze nije dovoljno jak da bi dovoljno ugrozio kognitivno funkcioniranje bolesnika da bi se ono očitovalo na njihovom pisanju. 
 
