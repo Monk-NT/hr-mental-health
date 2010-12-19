@@ -13,7 +13,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 
-\title{Something Something DARK SIDE  a.k.a.  Klasificiranje mentalnog zdravlja autora analizom teksta }
+\title{Klasificiranje mentalnog zdravlja autora analizom teksta }
 
 %VAŽNO: Zakomentirajte sljedeću liniju kada šaljete rad na recenziju
 %\name{Sonja Grđan, Veljko Srdarević} 
@@ -25,7 +25,7 @@ Unska 3, 10000 Zagreb, Hrvatska\\
 }
           
          
-\abstract{Proučavanje psihičkih poremećaja nudi bogate informacije o funkcioniranju ljudskog mozga, a takve podatke moguće je analizirati i široko primjenjivim metodama strojnog učenja. U ovom radu proučavani su pisani tekstovi, kao reprezentanti kognitivnog funkcioniranja, autora različitog mentalnog statusa (sudionici oboljeni od shizofrenije, bipolarnog poremećaja, depresije i kontrolna skupina bez tih poremećaja).  Koristeći stroj s potpornim vektorima, stablo odluke, neuronsku mrežu i Bayesov klasifikator izgrađeni su klasifikatori tekstova autora s različitih psihičkim statusom. REZ. ZAKLJUČAK}
+\abstract{Proučavanje psihičkih poremećaja nudi bogate informacije o funkcioniranju ljudskog mozga, a takve podatke moguće je analizirati i široko primjenjivim metodama strojnog učenja. U ovom radu proučavani su pisani tekstovi, kao reprezentanti kognitivnog funkcioniranja, autora različitog mentalnog statusa (sudionici oboljeni od shizofrenije, bipolarnog poremećaja, depresije i kontrolna skupina bez tih poremećaja).  Koristeći stroj s potpornim vektorima, naivni Bayesov klasifikator i naivni Bayesov klasifikator s procjenom jezgrene funkcije izgrađeni su klasifikatori tekstova autora s različitih psihičkim statusom. REZ. ZAKLJUČAK}
 
 \begin{document}
 
@@ -46,7 +46,7 @@ Dijagnosticiranje mentalnih bolesti zahtjevan je problem, pa bi izrada sustava k
 U idućem odjeljku dan je pregled dosadašnjih istraživanja ove teme. U trećem odjeljku opisan je metodološki pristup klasifikaciji tekstova s obzirom na mentalni status autora korišten u ovom radu. U četvrtom odjeljku prikazani su alati i algoritmi korišteni za klasifikaciju te rezultati vrednovanja. Potom je u petom odjeljku iznesen zaključak, uz prijedloge za buduća istraživanja.
 
 \section{Srodni radovi}
-Problemom klasifikacije mentalnog statusa autora teksta bavilo se nekoliko radovi koji su u uzorku imali tekstove pacijenata psihijatrijskih ustanova. \citet{strous} radili su automatsku klasifikaciju tekstova na temu \emph{Važna osoba u mom životu}, koje su napisali 36 shizofrenih sudionika nasuprot 36 ne-shizofrenih sudionika, pomoću stroja s potpornim vektorima \engl{support vector machine, SVM} i Bayesove regresije. Korištene se značajke najčešćih riječi, tri-grama slova (zbog specifičnosti hebrejskog jezika u kojima su gramatički značajni) i ponavljanje riječi, te je dobivena uspješnost klasifikacije tekstova 83,3\%.
+Problemom klasifikacije mentalnog statusa autora teksta bavilo se nekoliko radovi koji su u uzorku imali tekstove pacijenata psihijatrijskih ustanova. \citet{strous-2009} radili su automatsku klasifikaciju tekstova na temu \emph{Važna osoba u mom životu}, koje su napisali 36 shizofrenih sudionika nasuprot 36 ne-shizofrenih sudionika, pomoću stroja s potpornim vektorima \engl{support vector machine, SVM} i Bayesove regresije. Korištene se značajke najčešćih riječi, tri-grama slova (zbog specifičnosti hebrejskog jezika u kojima su gramatički značajni) i ponavljanje riječi, te je dobivena uspješnost klasifikacije tekstova 83,3\%.
 
 \citet{exray} kao skup za učenje koristili su tekstove 31 shizofrenog i 16 maničnih pacijenata psihijatrijske ustanove i 9 kontrolnih sudionika, koji su bilo verbalizirali tekst koji je kasnije pretipkan, bilo sami napisali tekst. Tekstovi su bili pisani na jednu od dvije zadane teme (\emph{Piknik u parku} i \emph{Lopov}) uz zadatak da se u tekst ukomponira unaprijed određena lista riječi. Tekstovi su pretvoreni u hrpu riječi \engl{bag of words} oblik i korištena je frekvencija riječi, a učenje je izvedeno pomoću SVM i stabla odluke. Uspješnost klasifikacije shizofrene nasuprot kontrolne skupine bila je 77\%, dok u klasifikaciji koja je uključivala manične sudionike uspješnost nije bila bolja od slučajne. 
 
@@ -57,7 +57,7 @@ Rješavanje ovog problema donekle je slično rješavanju problema određivanja i
 
 Govoreći o duljini tekstova potrebnoj da bi raznolikost rječnika bila stabilno određena i predstavljala potencijalno dobru značajku, \citet{tweedie} navode da je minimalna potrebna duljina 1000 riječi.
 
-U našem radu, za razliku radova \citep{strous-2009} i \citep{exray}, korišteni su tekstovi koje su napisali profesionalni pisci i autori blogova, čime pokušavamo utvrditi koliko su pokazatelji navedenih psihičkih bolesti u tekstu prožimajući u životu ljudi s tim poremećajima - budući da se radi o ljudima koji su u vrijeme pisanja očito adekvatno funkcionirali da bi mogli objaviti knjigu, odnosno održavati blog. Koristili smo i veći broj značajki i pokušali utvrditi koje najviše doprinose uspješnosti klasifikacije (JESMO LI?). Korištene značajke bazirane su na onima navedenima u \citep{kristo}, koje su odabrane na temelju moguće povezanosti sa simptomima psihičkih poremećaja.
+U našem radu, za razliku radova \citep{strous-2009} i \citep{exray}, korišteni su tekstovi koje su napisali profesionalni pisci i autori blogova, čime pokušavamo utvrditi koliko su pokazatelji navedenih psihičkih bolesti u tekstu prožimajući u životu ljudi s tim poremećajima - budući da se radi o ljudima koji su u vrijeme pisanja očito adekvatno funkcionirali da bi mogli objaviti knjigu, odnosno održavati blog. Koristili smo i veći broj značajki i pokušali utvrditi koje najviše doprinose uspješnosti klasifikacije. Korištene značajke bazirane su na onima navedenima u \citep{kristo}, koje su odabrane na temelju moguće povezanosti sa simptomima psihičkih poremećaja.
 
 
 \section{Klasifikacija mentalnog statusa autora koristeći tekstove}
@@ -70,44 +70,35 @@ Korištene su sljedeće značajke: broj različitih riječi, broj zamjenica \emp
 
 Korištenje broja različitih riječi ima svoju podlogu u povezanosti kreativnosti i bipolarnog poremećaja \citep{crea}. Budući da se kreativnost često operacionalizira pomoću raznolikosti produkcije, pretpostavljamo da će tekstovi autora s bipolarnim poremećajem imati veći broj različitih riječi u tekstu nego tekstovi drugih kategorija. Također, sklonost ka \emph{ljepljenju} na temu može se (iz različitih razloga) javiti kod oboljelih od shizofrenije ili depresivnog poremećaja, čime mogu biti ograničeni na manji skup riječi vezan uz tu temu, pa u tim skupinama vjerojatno možemo očekivati manji broj različitih riječi.
 
-Motivacija za korištenje broja zamjenica nalazi se u simptomima grandioznosti prisutnih kod boljelih od bipolarnog poremećaja. Također, u radu \citep{strous-2009} razlikovanje između tekstova shizofrenih i ne-shizofrenih pacijenata rađeno je prema frekvenciji pojedinih riječi, pri čemu je zamjenica \emph{ja} bila najfrekventnija u shizofrenoj skupini. Dakako, ova značajka korištena je samo na tekstovima pisanima u prvom licu (svim blogovima i dijelu knjiga).
+Motivacija za korištenje broja zamjenica nalazi se u simptomima grandioznosti prisutnih kod boljelih od bipolarnog poremećaja. Također, u radu \citep{strous-2009} razlikovanje između tekstova shizofrenih i ne-shizofrenih pacijenata rađeno je prema frekvenciji pojedinih riječi, pri čemu je zamjenica \emph{ja} bila najfrekventnija u shizofrenoj skupini. Dakako, ova značajka korištena je samo na kategorijama s tekstovima pisanima samo u prvom licu, odnosno na svim kategorijama blogova.
 
 %quoth the server, nevermore : http://wordnetweb.princeton.edu/perl/webwn?s=function word
-%Funkcijske riječi su po definiciji zatvoreni razred neinfleksijskih riječi koje ne nose značajno značenje i vrše neku gramatičku funkciju. Takve riječi su u engleskom jeziku prilozi, prijedlozi, odrednice, veznici, modalni glagoli, pomoćni glagoli i čestice. Korištenje ovih riječi kao značajke osobito je pogodno u slučajevima u kojima tekstovi nisu pisani na istu temu, budući da ne ovise o tome, MISLIM DA NAM OVA DEFINICIJA IPAK NE TREBA
+%Funkcijske riječi su po definiciji zatvoreni razred neinfleksijskih riječi koje ne nose značajno značenje i vrše neku gramatičku funkciju.  Korištenje ovih riječi kao značajke osobito je pogodno u slučajevima u kojima tekstovi nisu pisani na istu temu, budući da ne ovise o tome, MISLIM DA NAM OVA DEFINICIJA IPAK NE TREBA
 
 
 
 \subsection{Predobrada podataka}
-Obrada teksta je izvršena pomoću skripte pisane u programskom jeziku perl. Obrada teksta se sastoji od izvlačenja određenog broja značajki koje se poslije koriste za daljnu obradu teksta.
-značajke koje se izvlače su:
+Obrada teksta je izvršena pomoću skripte pisane u programskom jeziku \emph{Perl}\footnote{\texttt{www.perl.com}}, kako bi se svakoj značajki pridružila brojčana vrijednost. Značajke su određene na sljedeći način:
 \begin{enumerate}
-\item Frekvencija pojavljivanja funkcijskih riječi u tekstu u odnosu na broj svih riječi u tekstu,
-\item Frekvencija pojavljivanja interpunkcijskih znakova u odnosu na dužinu teksta,
-\item Frekvencija pojavljivanja zamjenica za prvo lice jednine u odnosu na broj svih riječi u tekstu,
-\item Postotak različitih riječi u tekstu,
-\item Prosječna dužina riječi u tekstu.
+\item Korištenje funkcijskih riječi određeno je kao frekvencija pojavljivanja funkcijskih riječi u tekstu u odnosu na broj svih riječi u tekstu. Takve riječi su u engleskom jeziku prilozi, prijedlozi, odrednice, veznici, pomoćni glagoli i čestice. Korištena je lista od 159 čestih funkcijskih riječi, preborjano njihovo pojavljivanje u tekstu, te podijeljeno brojem svih riječi u tekstu;
+\item Broj interpunkcijskih znakova određen je kao frekvencija pojavljivanja interpunkcijskih znakova u odnosu na dužinu teksta. Korištena je manja grupa interpunkcijskih znakova koja se sastoji od: točke (.), upitnika (?), uskličnika (!), zareza (,), dvotočja (:), točke-zareza (;), apostrofa ('). Znakovi navoda ni crtica nisu prebrojavani, budući da zbog različitog načina navođenja dijaloga to može biti odrednica dizajna knjige i slova, a ne značajka samog teksta;
+\item Broj zamjenica za prvo lice jednine određivan je kao frekvencija pojavljivanja tih zamjenica u odnosu na broj svih riječi u tekstu;
+\item Broj različitih riječi u tekstu određen je kao postotni udio različitih riječi u broju svih riječi u tekstu;
+\item Prosječna dužina riječi u tekstu izračunata je zbrajanjem duljina svih riječi u tekstu, te dijeljenjem sa brojem riječi.
 \end{enumerate}
-Potrebno je napomenuti da nisu korišteni svi postojeći interpunkcijski znakovi engleskog jezika, već nešto manja grupa koja se sastoji od:
-točke (.),
-upitnika (?),
-uskličnika (!),
-zareza (,),
-dvotočja (:),
-točke-zareza (;),
-apostrofa (').
-Može se primjetiti da nismo koristili znakove navoda, kao ni crticu zbog različite forme navođenja teksta među autorima.
+
 
 \subsection{Metode klasifikacije}
 
 Provedba postupaka strojnog učenja na obrađenim tekstovima rađena je u programskom alatu \emph{Weka} \footnote{\texttt{http://www.cs.waikato.ac.nz/ml/weka/}}, koji podržava velik broj algoritama analize podataka i prediktivnog modeliranja. S obzirom na jednostavnost uporabe različitih algoritama nadziranog učenja u \emph{Weka}-i korišteno ih je nekoliko te su uspoređeni rezultati.  
 
-\emph{Naivni Bayesov klasifikator} pridjeljuje primjeru onu klasu za koju je vjerojatnost najveća na temelju njegovog vektora svojstava, uz pretpostavku da su svojstva nezavnisna i temelji se na Bayesovom teoremu \citep{bayes-63}. Iako je jako jednostavan klasifikator, koji počiva na često pogrešnoj pretpostavci o nezavisnosti svojstava, u upotrebi redovito daje dobre rezultate \citep{hand-yu}
+\emph{Naivni Bayesov klasifikator} pridjeljuje primjeru onu klasu za koju je vjerojatnost najveća na temelju njegovog vektora svojstava, uz pretpostavku da su svojstva nezavnisna. Temelji se na Bayesovom teoremu \citep{bayes-63}. Iako je prilično jednostavan, koji počiva na često pogrešnoj pretpostavci o nezavisnosti svojstava, u upotrebi redovito daje dobre rezultate \citep{hand-yu}
 
 \emph{Naivni Bayesov klasifikator s procjenom jezgrene funkcije} se temelji na klasičnom Bayesovom klasifikatoru uz razliku da ne pretpostavlja normalnu raspodjelu neprekinutih varijabli, već radi procjenu jezgrene funkcije, tj.~distribucije iz koje proizlaze kontinuirane varijable \citep{john-95}.
 
-\emph{Stroj s potpornim vektorima} \engl{Support Vector Machine, SVM} je nadzirana metoda strojnog učenja koja se temelji na konstrukciji hiperravnine ili hiperravnina koje odjeljuju primjere. Hiperravnine se pronalaze traženjem \emph{potpornih vektora}, tj.~onih primjera koji pripadaju različitim klasama, a najmanje su međusobne udaljenosti \citep{cortes-vap}
+\emph{Stroj s potpornim vektorima} \engl{Support Vector Machine, SVM} je metoda strojnog učenja koja se temelji na konstrukciji hiperravnine ili hiperravnina koje odjeljuju primjere. Hiperravnine se pronalaze traženjem \emph{potpornih vektora}, tj.~onih primjera koji pripadaju različitim klasama, a najmanje su međusobne udaljenosti \citep{cortes-vap}
 
-\emph{Umjetne neuronske mreže} \engl{artifical neural networks} su mreže međusobno povezanih \emph{neurona}, nezavisnih isprogramiranih djelova koji obavljaju neku jednostavnu funkciju, da bi kao cjelina obavljali složeniju zadaću. Osnovni model umjetne neuronske mreže je perceptron \cite{rosenblatt-58}.
+%\emph{Umjetne neuronske mreže} \engl{artifical neural networks} su mreže međusobno povezanih \emph{neurona}, nezavisnih isprogramiranih djelova koji obavljaju neku jednostavnu funkciju, da bi kao cjelina obavljali složeniju zadaću. Osnovni model umjetne neuronske mreže je perceptron \cite{rosenblatt-58}.
 
 
 \section{Rezultati}
@@ -120,10 +111,9 @@ Radi odsutnosti dovoljnog broja poznatih pisaca koji boluju od shizofrenije ta s
 
 Veličina tekstova varirala je od 3 kB do 24 kB, te su snimani u ANSI standardu. Pretežno su imali iznad 5 kB, kada god je ta količina teksta bila dostupna, što odgovara graničnoj vrijednosti od 1000 riječi potrebnih za ispravnost nekih značajki  \citep{tweedie}. Sve značajke određivane su uzimajući u obzir duljinu teksta. 
  
-U ovom radu je korištena 10-prolazna kros validacija. Testiranje dobivenih modela je izvršeno na odvojenim skupovima za testiranje.
+Korišteni su naivni Bayesovi klasifikatori implementirani u Weka-i, dok je SVM je korišten pomoću biblioteke WLSVM \footnote{\texttt{www.cs.iastate.edu/~yasser/wlsvm}} \citep{yh05}. Sve značajke su normalizacijom svedene na raspon $ [0,1]$. Prilikom izrade modela korištena je 10-prolazna unakrsna provjera. Potom je na najboljim modelima za pojedine kombinacije skupina i značajki testirana uspješnost modela na odvojenim skupovima za testiranje.
 
-
-SVM je u Weki korišten pomoću biblioteke WLSVM \footnote{\texttt{www.cs.iastate.edu/~yasser/wlsvm}} \citep{yh05}.
+Referentna metoda čije rezultate uspoređujemo sa rezultatima naših klasifikatora je klasifikacija u apriorno najvjerojatniju klasu. U realnim uvjetima i na velikim uzorcima, mogla bi se koristiti metoda koja u obzir uzima prevalenciju pojedinih psihičkih bolesti u populaciji, prevalencija u populaciji ljudi koji dolaze na psihologijsku procjenu, ili pak prevalencija u populaciji pisaca, međutim, takvi podaci nisu nam dostupni.
 
 \begin{table*}
 \caption{Postotci točno klasificiranih primjera na različitim metodama na skupu blogova}
@@ -135,8 +125,7 @@ Metoda & Točno klasificiranih \\
 \midrule
 Naivni Bayesov klasifikator & 50\%\\
 Naivni Bayesov klasifikator s procjenom jezgrene funkcije   & 50\%\\
-SVM   & Tekst u treÄ‡em retku\\
-Nesto   & Tekst u ÄŤetvrtom retku\\
+SVM   & Tekst u trećem retku\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -151,23 +140,24 @@ Metoda & Točno klasificiranih\\
 Naivni Bayesov klasifikator & 52.17\%\\
 Naivni Bayesov klasifikator s procjenom jezgrene funkcije & 56.52\%\\
 SVM & rezultat\\
-Nesto & rezultat\\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table*}
 
 Može se primjetiti da rezultati 
+
 Neuspjeh izrade automatskog klasifikatora mentalnog statusa autora tekstova u ovom radu u konačnici ima optimističnu notu: s obzirom da su tekstovi uzeti od autora koji imaju dijagnozu, no u vrijeme pisanja tekstova najvjerojatnije nisu bili u akutnoj fazi bolesti, moguće je da utjecaj bolesti van akutne faze nije dovoljno jak da bi dovoljno ugrozio kognitivno funkcioniranje bolesnika da bi se ono očitovalo na njihovom pisanju. 
 
-Dakako, postoji mnogo prostora za poboljšanja metodološkog pristupa. U budućim istraživanjima bilo bi dobro koristiti tekstove za koje pouzdano znamo da su ih autori pisali u akutnoj fazi svoje bolesti, kada su kognitivne funkcije najviše pogođene, čime bi se povećala izglednost dobivanja uspješnijeg razlikovanja među tekstovima. Također, bilo bi dobro koristiti tekstove koji su pisani na istu temu (na tragu korištenja osobnih blogova), kako bi se smanjila mogućnost da semantički kontekst utječe na rezultate, ili pak da se lakše koriste neke potencijalno korisne semantičke značajke. Osim toga moglo bi se kontrolirati vještinu pisanja autora tekstova koristeći autore koji nisu izrazito vješti u tome kao što su profesionalni pisci, te koristiti nezavisne procjene stručnjaka za određivanje kvalitete teksta. Moguće je da bi i veći uzorak tekstova donio bolje rezultate, no problematično je njegovo prikupljanje s obzirom na malu populaciju oboljelih. Također, mogle bi se koristiti još neke značajke, a čija je implementacija bila preopširna za okvire ovog rada: frekvencije izraza \engl{term frequency, TF}, inverzne frekvencije dokumenta \engl{inverze document frequency} i njihovih međuodnosa sa frekvencijom funkcijskih riječi.
+
 
 
 \section{Zaključak}
 
-Rad je super.
+U svrhu boljeg razumijevanja psihičkih bolesti i eventualnog doprinosa dijagnostici istih u ovom radu pokušali smo izraditi klasifikator tekstova prema mentalnom statusu autora, koje je obuhvaćalo autore sa bipolarnim poremećajem, shizofrenijom i depresijom, te one bez tih psihičkih poremećaja. Korišteni su tekstovi poznatih pisaca i tekstovi preuzeti s blogova, a pokušali smo ih klasificirati na temelju značajki broja različitih riječi, broja zamjenica prvog lica, broja interpunkcijskih znakova, broja funkcijskih riječi i prosječne dužine riječi u tekstu. 
+Ovakav pristup problemu nije postigao znatan uspjeh. Najuspješnija je bila klasifikacija, što s obzirom na uspješnost referentne metode od % nije veliko poboljšanje.Također, relativno je uspješna bila klasifikacija ... nasuprot % referentne metode. No, usprkos 
 
-%\citep{howells-51}
+Dakako, postoji mnogo prostora za poboljšanja metodološkog pristupa. U budućim istraživanjima bilo bi dobro koristiti tekstove za koje pouzdano znamo da su ih autori pisali u akutnoj fazi svoje bolesti, kada su kognitivne funkcije najviše pogođene, čime bi se povećala izglednost dobivanja uspješnijeg razlikovanja među tekstovima. Također, bilo bi dobro koristiti tekstove koji su pisani na istu temu (na tragu korištenja osobnih blogova), kako bi se smanjila mogućnost da semantički kontekst utječe na rezultate, ili pak da se lakše koriste neke potencijalno korisne semantičke značajke. Osim toga moglo bi se kontrolirati vještinu pisanja autora tekstova koristeći autore koji nisu izrazito vješti u tome kao što su profesionalni pisci, te koristiti nezavisne procjene stručnjaka za određivanje kvalitete teksta. Moguće je da bi i veći uzorak tekstova donio bolje rezultate, no problematično je njegovo prikupljanje s obzirom na malu populaciju oboljelih. Također, mogle bi se koristiti još neke značajke, a čija je implementacija bila preopširna za okvire ovog rada: frekvencije izraza \engl{term frequency, TF}, inverzne frekvencije dokumenta \engl{inverse document frequency} i njihovih međuodnosa sa frekvencijom funkcijskih riječi.
 
 \bibliographystyle{su2010}
 \bibliography{su2010} 
