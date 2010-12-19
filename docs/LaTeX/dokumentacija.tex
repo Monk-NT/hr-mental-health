@@ -92,9 +92,9 @@ Obrada teksta je izvršena pomoću skripte pisane u programskom jeziku \emph{Per
 
 Provedba postupaka strojnog učenja na obrađenim tekstovima rađena je u programskom alatu \emph{Weka} \footnote{\texttt{http://www.cs.waikato.ac.nz/ml/weka/}}, koji podržava velik broj algoritama analize podataka i prediktivnog modeliranja. S obzirom na jednostavnost uporabe različitih algoritama nadziranog učenja u \emph{Weka}-i korišteno ih je nekoliko te su uspoređeni rezultati.  
 
-\emph{Naivni Bayesov klasifikator} pridjeljuje primjeru onu klasu za koju je vjerojatnost najveća na temelju njegovog vektora svojstava, uz pretpostavku da su svojstva nezavnisna. Temelji se na Bayesovom teoremu \citep{bayes-63}. Iako je prilično jednostavan, koji počiva na često pogrešnoj pretpostavci o nezavisnosti svojstava, u upotrebi redovito daje dobre rezultate \citep{hand-yu}
+\emph{Naivni Bayesov klasifikator} pridjeljuje primjeru onu klasu za koju je vjerojatnost najveća na temelju njegovog vektora svojstava, uz pretpostavku da su svojstva nezavisna. Temelji se na Bayesovom teoremu \citep{bayes-63}. Iako je prilično jednostavan, koji počiva na često pogrešnoj pretpostavci o nezavisnosti svojstava, u upotrebi redovito daje dobre rezultate \citep{hand-yu}
 
-\emph{Naivni Bayesov klasifikator s procjenom jezgrene funkcije} se temelji na klasičnom Bayesovom klasifikatoru uz razliku da ne pretpostavlja normalnu raspodjelu neprekinutih varijabli, već radi procjenu jezgrene funkcije, tj.~distribucije iz koje proizlaze kontinuirane varijable \citep{john-95}.
+\emph{Naivni Bayesov klasifikator s procjenom jezgrene funkcije} temelji se na klasičnom Bayesovom klasifikatoru uz razliku da ne pretpostavlja normalnu raspodjelu neprekinutih varijabli, već radi procjenu jezgrene funkcije, tj.~distribucije iz koje proizlaze kontinuirane varijable \citep{john-95}.
 
 \emph{Stroj s potpornim vektorima} \engl{Support Vector Machine, SVM} je metoda strojnog učenja koja se temelji na konstrukciji hiperravnine ili hiperravnina koje odjeljuju primjere. Hiperravnine se pronalaze traženjem \emph{potpornih vektora}, tj.~onih primjera koji pripadaju različitim klasama, a najmanje su međusobne udaljenosti \citep{cortes-vap}
 
@@ -111,7 +111,7 @@ Radi odsutnosti dovoljnog broja poznatih pisaca koji boluju od shizofrenije ta s
 
 Veličina tekstova varirala je od 3 kB do 24 kB, te su snimani u ANSI standardu. Pretežno su imali iznad 5 kB, kada god je ta količina teksta bila dostupna, što odgovara graničnoj vrijednosti od 1000 riječi potrebnih za ispravnost nekih značajki  \citep{tweedie}. Sve značajke određivane su uzimajući u obzir duljinu teksta. 
  
-Korišteni su naivni Bayesovi klasifikatori implementirani u Weka-i, dok je SVM je korišten pomoću biblioteke WLSVM \footnote{\texttt{www.cs.iastate.edu/~yasser/wlsvm}} \citep{yh05}. Sve značajke su normalizacijom svedene na raspon $ [0,1]$. Prilikom izrade modela korištena je 10-prolazna unakrsna provjera. Potom je na najboljim modelima za pojedine kombinacije skupina i značajki testirana uspješnost modela na odvojenim skupovima za testiranje.
+Korišteni su naivni Bayesovi klasifikatori implementirani u Weka-i. SVM s radijalnom baznom funkcijom korišten je pomoću biblioteke WLSVM \footnote{\texttt{www.cs.iastate.edu/~yasser/wlsvm}} \citep{yh05}. Sve značajke su normalizacijom svedene na raspon $ [0,1]$. Prilikom izrade modela korištena je 10-prolazna unakrsna provjera. Potom je na najboljim modelima za pojedine kombinacije skupina i značajki testirana uspješnost modela na odvojenim skupovima za testiranje.
 
 Referentna metoda čije rezultate uspoređujemo sa rezultatima naših klasifikatora je klasifikacija u apriorno najvjerojatniju klasu. U realnim uvjetima i na velikim uzorcima, mogla bi se koristiti metoda koja u obzir uzima prevalenciju pojedinih psihičkih bolesti u populaciji, prevalencija u populaciji ljudi koji dolaze na psihologijsku procjenu, ili pak prevalencija u populaciji pisaca, međutim, takvi podaci nisu nam dostupni.
 
