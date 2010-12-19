@@ -116,81 +116,85 @@ Korišteni su naivni Bayesovi klasifikatori implementirani u Weka-i. SVM s radij
 Referentna metoda čije rezultate uspoređujemo sa rezultatima naših klasifikatora je klasifikacija u apriorno najvjerojatniju klasu. U realnim uvjetima dijagnostike i na velikim uzorcima mogla bi se koristiti metoda koja u obzir uzima prevalenciju pojedinih psihičkih bolesti u populaciji, prevalencija u populaciji ljudi koji dolaze na psihologijsku procjenu, ili pak prevalencija u populaciji pisaca, međutim, takvi podaci nisu nam dostupni.
 
 \begin{table*}
-\caption{Postotci točno klasificiranih primjera na različitim metodama na skupu blogova}
+\caption{Postotak točno klasificiranih primjera  na skupu blogova korištenjem različitih algoritama}
 \label{tab:rezultati}
 \begin{center}
 \begin{tabular}{ll}
 \toprule
 Metoda & Točno klasificiranih \\
 \midrule
-Naivni Bayesov klasifikator & 50\%\\
-Naivni Bayesov klasifikator s procjenom jezgrene funkcije   & 50\%\\
-SVM   & 35.70\%\\
-Apriorno najvjerojatnija klasa & 36.30\%\\
+Naivni Bayesov klasifikator & 50,0\%\\
+Naivni Bayesov klasifikator s procjenom jezgrene funkcije   & 50,0\%\\
+SVM   & 35.7\%\\
+Apriorno najvjerojatnija klasa & 36.3\%\\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table*}
 \begin{table*}
-\caption{Postotci točno klasificiranih primjera na različitim metodama na skupu pisaca}
+\caption{Postotak točno klasificiranih primjera na skupu pisaca }
 \begin{center}
 \begin{tabular}{ll}
 \toprule
 Metoda & Točno klasificiranih\\
 \midrule
-Naivni Bayesov klasifikator & 52.17\%\\
-Naivni Bayesov klasifikator s procjenom jezgrene funkcije & 56.52\%\\
-SVM & 50\%\\
-Apriorno najvjerojatnija klasa & 33.33\%\\
+Naivni Bayesov klasifikator & 52.2\%\\
+Naivni Bayesov klasifikator s procjenom jezgrene funkcije & 56.5\%\\
+SVM & 50,0\%\\
+Apriorno najvjerojatnija klasa & 33.3\%\\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table*}
 
 \begin{table*}
-\caption{Postotci točno klasificiranih primjera na različitim metodama u slučaju klasifikacije na samo dvije klase na skupu blogova}
+\caption{Postotak točno klasificiranih primjera na skupu blogova po parovima klasa korištenjem različitih algoritama}
 \label{lab:rezultatiBlogGrupa}
 \begin{center}
 \begin{tabular}{lll}
 \toprule
 Grupe & Metoda & Točno klasificiranih\\
 \midrule
-Normalni, schizofreni & Bayes & 81.48\%\\
- & Bayes s procjenom jezgrene funkc. & 70.37\%\\
- & SVM & 62.00\%\\
- & Apriorno najvjerojatnija klasa & 59.00\%\\
-Bipolarni, schizofreni & Bayes & 70.37\%\\
- & Bayes s procjenom jezgrene funkc. & 62.96\%\\
- & SVM & 59.00\%\\
- & Apriorno najvjerojatnija klasa & 59.00\%\\
-Bipolarni, normalni & Bayes & 66.67 \%\\
- & Bayes s procjenom jezgrene funkc. & 66.67\%\\
- & SVM & 46.60\%\\
- & Apriorno najvjerojatnija klasa & 50.00\%\\
+\textbf{Normalni, shizofreni} & \textbf{Bayes} & \textbf{81.5\%}\\
+ & Bayes s procjenom jezgrene funkcije. & 70.4\%\\
+ & SVM & 62.0\%\\
+ & Apriorno najvjerojatnija klasa & 59.0\%\\
+\midrule
+ \textbf{Bipolarni, shizofreni} &  \textbf{Bayes} &  \textbf{70.4\%}\\
+ & Bayes s procjenom jezgrene funkcije & 63.0\%\\
+ & SVM & 59.0\%\\
+ & Apriorno najvjerojatnija klasa & 59.0\%\\
+\midrule
+Bipolarni, normalni & Bayes & 66.7\%\\
+ & Bayes s procjenom jezgrene funkcije. & 66.7\%\\
+ & SVM & 46.6\%\\
+ & Apriorno najvjerojatnija klasa & 50.0\%\\
  \bottomrule
  \end{tabular}
  \end{center}
  \end{table*}
 \begin{table*}
-\caption{Postotci točno klasificiranih primjera na različitim metodama u slučaju klasifikacije na samo dvije klase na skupu pisaca}
+\caption{Postotak točno klasificiranih primjera na skupu pisaca po parovima klasa korištenjem različitih algoritama}
 \label{tab:rezultPisciGrupa}
 \begin{center}
 \begin{tabular}{lll}
 \toprule
 Grupe & Metoda & Točno klasificiranih\\
 \midrule
-Depresivni, normalni & Bayes & 60.00\%\\
- & Bayes s procjenom jezgrene funkc. & 70.00\%\\
+Depresivni, normalni & Bayes & 60.0\%\\
+ & Bayes s procjenom jezgrene funkcije & 70.0\%\\
  & SVM & 67.4\%\\
-  & Apriorno najvjerojatnija klasa & 50.00\%\\
-Bipolarni, normalni & Bayes & 64.50\%\\
- & Bayes s procjenom jezgrene funkc. & 67.74\%\\
- & SVM & 67.70\%\\
-  & Apriorno najvjerojatnija klasa & 50.00\%\\
-Bipolarni, depresivni & Bayes & 66.67\%\\
- & Bayes s procjenom jezgrene funkc. & 76.66\%\\
-  & SVM & 60.00\%\\
-   & Apriorno najvjerojatnija klasa & 50.00\%\\
+  & Apriorno najvjerojatnija klasa & 50.0\%\\
+\midrule
+Bipolarni, normalni & Bayes & 64.5\%\\
+ & Bayes s procjenom jezgrene funkcije & 67.7\%\\
+ & SVM & 67.7\%\\
+  & Apriorno najvjerojatnija klasa & 50.0\%\\
+\midrule
+ \textbf{Bipolarni, depresivni} &  Bayes &  66.7\%\\
+ &  \textbf{Bayes s procjenom jezgrene funkcije} &  \textbf{76.7\%}\\
+  & SVM & 60.0\%\\
+   & Apriorno najvjerojatnija klasa & 50.0\%\\
 \bottomrule
 \end{tabular}
 \end{center}
