@@ -88,21 +88,26 @@ značajke koje se izvlače su:
 \item Prosječna dužina riječi u tekstu.
 \end{enumerate}
 Potrebno je napomenuti da nisu korišteni svi postojeći interpunkcijski znakovi znakovi engleskog jezika, već nešto manja grupa koja se sastoji od:
-\begin{itemize}
-\item točke (.),
-\item upitnika (?),
-\item uskličnika (!),
-\item zareza (,),
-\item dvotočja (:),
-\item točke-zareza (;),
-\item apostrofa (').
-\end{itemize}
+točke (.),
+upitnika (?),
+uskličnika (!),
+zareza (,),
+dvotočja (:),
+točke-zareza (;),
+apostrofa (').
 Može se primjetiti da nismo koristili znakove navoda, kao ni crticu zbog različite forme navođenja teksta među autorima.
 
 \subsection{Metode klasifikacije}
 
 Provedba postupaka strojnog učenja na obrađenim tekstovima rađena je u programskom alatu \emph{Weka} (REF), koji podržava velik broj algoritama analize podataka i prediktivnog modeliranja. S obzirom na jednostavnost uporabe različitih metoda analize u \emph{Weka}-i korišteno ih je nekoliko te su uspoređeni rezultati.  
-SVM, decision tree, neuronske mreže, bayes
+SVM+
+, decision tree
+, neuronske mreže
+, bayes+
+
+\emph{Naivni Bayesov klasifikator} pridjeljuje primjeru onu klasu za koju je vjerojatnost najveća na temelju njegovog vektora svojstava, uz pretpostavku da su svojstva nezavnisna i temelji se na Bayesovom teoremu\ref{bayes-63}. Iako je jako jednostavan klasifikator, koji počiva na često pogrešnoj pretpostavci o nezavisnosti svojstava, u upotrebi redovito daje dobre rezultate \ref{hand-yu}.
+
+\emph{Stroj s potpornim vektorima} \engl{Support Vector Machine, SVM} je nadzirana metoda strojnog učenja koja se temelji na konstrukciji hiperravnine ili hiperravnina koje odjeljuju primjere. Hiperravnine se pronalaze traženjem \emph{potpornih vektora}, tj.~onih primjera koji pripadaju različitim klasama, a najmanje su međusobne udaljenosti. NEMOGU PRONAĆ ORIGIGI RAD BAJ VAPNIK I NEKA ZENSKA SA KUL IMENOM KOJE SAM ZABORAVIJA, A VAPNIK SAM ZAPAMTIJA JER SMO MORALI ZNAT VAPNIK-CHMELJA DIMENZIJU
 NAPISATI O SVAKOJ DVE REČENICE (OSNOVNA IDEJA)
 
 \section{Rezultati}
@@ -133,8 +138,8 @@ Rad je super.
 
 %\citep{howells-51}
 
-%\bibliographystyle{su2010}
-%\bibliography{su2010} 
+\bibliographystyle{su2010}
+\bibliography{su2010} 
 
 \end{document}
 
