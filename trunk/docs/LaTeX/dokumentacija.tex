@@ -129,8 +129,38 @@ OPIS 10-FOLD CROSS-VALIDATION, PA TESTIRANJE
 SVM je u Weki korišten pomoću biblioteke WLSVM \footnote{\texttt{www.cs.iastate.edu/~yasser/wlsvm}} \citep{yh05}.
 
 tabliceeee
+\begin{table*}
+\caption{Postotci točno klasificiranih primjera na različitim metodama na skupu blogova}
+\label{tab:rezultati}
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Metoda & Točno klasificiranih \\
+\midrule
+Naivni Bayesov klasifikator & 50\%\\
+Naivni Bayesov klasifikator s procjenom jezgrene funkcije   & 50\%\\
+SVM   & Tekst u treÄ‡em retku\\
+Nesto   & Tekst u ÄŤetvrtom retku\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table*}
+\begin{table*}
+\caption{Postotci točno klasificiranih primjera na različitim metodama na skupu pisaca}
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Metoda & Točno klasificiranih\\
+\midrule
+Naivni Bayesov klasifikator & 52.17\%\\
+Naivni Bayesov klasifikator s procjenom jezgrene funkcije & 56.52\%\\
+SVM & rezultat\\
+Nesto & rezultat\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table*}
 
-tabliceeee
 
 DODAT JOŠ NEKI OPIS NEUSPJEHA :D
 Neuspjeh izrade automatskog klasifikatora mentalnog statusa autora tekstova u ovom radu u konačnici ima optimističnu notu: s obzirom da su tekstovi uzeti od autora koji imaju dijagnozu, no u vrijeme pisanja tekstova najvjerojatnije nisu bili u akutnoj fazi bolesti, moguće je da utjecaj bolesti van akutne faze nije dovoljno jak da bi dovoljno ugrozio kognitivno funkcioniranje bolesnika da bi se ono očitovalo na njihovom pisanju. 
