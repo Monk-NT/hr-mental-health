@@ -101,16 +101,13 @@ Može se primjetiti da nismo koristili znakove navoda, kao ni crticu zbog razli�
 
 Provedba postupaka strojnog učenja na obrađenim tekstovima rađena je u programskom alatu \emph{Weka} \footnote{\texttt{http://www.cs.waikato.ac.nz/ml/weka/}}, koji podržava velik broj algoritama analize podataka i prediktivnog modeliranja. S obzirom na jednostavnost uporabe različitih algoritama nadziranog učenja u \emph{Weka}-i korišteno ih je nekoliko te su uspoređeni rezultati.  
 
-, neuronske mreže
+\emph{Naivni Bayesov klasifikator} pridjeljuje primjeru onu klasu za koju je vjerojatnost najveća na temelju njegovog vektora svojstava, uz pretpostavku da su svojstva nezavnisna i temelji se na Bayesovom teoremu \citep{bayes-63}. Iako je jako jednostavan klasifikator, koji počiva na često pogrešnoj pretpostavci o nezavisnosti svojstava, u upotrebi redovito daje dobre rezultate \citep{hand-yu}
 
+\emph{Naivni Bayesov klasifikator s procjenom jezgrene funkcije} se temelji na klasičnom Bayesovom klasifikatoru uz razliku da ne pretpostavlja normalnu raspodjelu neprekinutih varijabli, već radi procjenu jezgrene funkcije, tj.~distribucije iz koje proizlaze kontinuirane varijable \citep{john-95}.
 
-\emph{Naivni Bayesov klasifikator} pridjeljuje primjeru onu klasu za koju je vjerojatnost najveća na temelju njegovog vektora svojstava, uz pretpostavku da su svojstva nezavnisna i temelji se na Bayesovom teoremu \citep{bayes-63}. Iako je jako jednostavan klasifikator, koji počiva na često pogrešnoj pretpostavci o nezavisnosti svojstava, u upotrebi redovito daje dobre rezultate \citep{hand-yu}OVA REFERENCA NE VALJA.
+\emph{Stroj s potpornim vektorima} \engl{Support Vector Machine, SVM} je nadzirana metoda strojnog učenja koja se temelji na konstrukciji hiperravnine ili hiperravnina koje odjeljuju primjere. Hiperravnine se pronalaze traženjem \emph{potpornih vektora}, tj.~onih primjera koji pripadaju različitim klasama, a najmanje su međusobne udaljenosti \citep{cortes-vap}
 
-\emph{Stroj s potpornim vektorima} \engl{Support Vector Machine, SVM} je nadzirana metoda strojnog učenja koja se temelji na konstrukciji hiperravnine ili hiperravnina koje odjeljuju primjere. Hiperravnine se pronalaze traženjem \emph{potpornih vektora}, tj.~onih primjera koji pripadaju različitim klasama, a najmanje su međusobne udaljenosti. NEMOGU PRONAĆ ORIGIGI RAD BAJ VAPNIK I NEKA ZENSKA SA KUL IMENOM KOJE SAM ZABORAVIJA, A VAPNIK SAM ZAPAMTIJA JER SMO MORALI ZNAT VAPNIK-CHMELJA DIMENZIJU
-
-\emph{Stabla odluke} su neparametarska, diskriminativna metoda aproksimiranja funkcije diskretnih vrijednosti, koja se temelji na izgradnji stabla kao grafičke reprezentacije ako-onda pravila \cite{mojaBaba}.
-
-\emph{Umjetne neuronske mreže} \engl{artifical neural networks} su mreže međusobno povezanih \emph{neurona}, nezavisnih isprogramiranih djelova koji obavljaju neku jednostavnu funkciju, da bi kao cjelina obavljali složeniju zadaću. Osnovni model umjetne neuronske mreže je perceptron \cite{rosenblatt-58}I OVA REFERENCA NE VALJA.
+\emph{Umjetne neuronske mreže} \engl{artifical neural networks} su mreže međusobno povezanih \emph{neurona}, nezavisnih isprogramiranih djelova koji obavljaju neku jednostavnu funkciju, da bi kao cjelina obavljali složeniju zadaću. Osnovni model umjetne neuronske mreže je perceptron \cite{rosenblatt-58}.
 
 
 \section{Rezultati}
@@ -122,13 +119,12 @@ Blogovi autora koji imaju neki psihički poremećaj pronađeni su preko web-stra
 Radi odsutnosti dovoljnog broja poznatih pisaca koji boluju od shizofrenije ta skupina nije prikupljena, kao ni skupina tekstova autora blogova koj boluju od depresije, zbog ponekad olakog korištenja riječi depresija u svakodnevnom govoru i time uzrokovane pretpostavljene niske pouzdanosti procjene stvarne depresivnosti kod autora. Tako su se podaci za treniranje i testiranje sastojali od šest kategorija: poznati pisci s bipolarnim poremećajem, poznati pisci koji boluju od depresije, poznati pisci bez identificiranog psihičkog poremećaja, autori blogova s dijagnosticiranom shizofrenijom, autori blogova oboljeli od bipolarnog poremećaja i autori blogova bez identificiranog psihičkog poremećaja. Slijedeći kriterij o 3 do 5 puta većem broju primjera u pojedinoj kategoriji od broja značajki \citep{ribaric} u svakoj kategoriji skupa podataka za treniranje prikupljeno je 20 primjera, osim u kategoriji blogova autora sa shizofrenijom, gdje ih zbog loše dostupnosti ima 14. U skupu podataka za testiranje svaka je kategorija imala 15 primjera, osim, ponovno, kategorije blogova autora sa shizofrenijom, u kojoj ih ima 12. 
 
 Veličina tekstova varirala je od 3 kB do 24 kB, te su snimani u ANSI standardu. Pretežno su imali iznad 5 kB, kada god je ta količina teksta bila dostupna, što odgovara graničnoj vrijednosti od 1000 riječi potrebnih za ispravnost nekih značajki  \citep{tweedie}. Sve značajke određivane su uzimajući u obzir duljinu teksta. 
-
-K-prolazna kros validacija \engl{K-fold cross validation} je tehinika korištena u strojnom učenju gdje se skup za treniranje podjeli na K nasumičnih skupova. Tada se treniranje vrši na $K-1$ skupova a jedan skup ostaje za validaciju dobivenog rezultata. Proces se ponavlja K puta tako da svaki put drugi skup bude izostavljen za validaciju. U ovom radu je korištena 10-prolazna kros validacija. Testiranje dobivenih modela je izvršeno na odvojenim skupovima za testiranje.
+ 
+U ovom radu je korištena 10-prolazna kros validacija. Testiranje dobivenih modela je izvršeno na odvojenim skupovima za testiranje.
 
 
 SVM je u Weki korišten pomoću biblioteke WLSVM \footnote{\texttt{www.cs.iastate.edu/~yasser/wlsvm}} \citep{yh05}.
 
-tabliceeee
 \begin{table*}
 \caption{Postotci točno klasificiranih primjera na različitim metodama na skupu blogova}
 \label{tab:rezultati}
@@ -161,8 +157,7 @@ Nesto & rezultat\\
 \end{center}
 \end{table*}
 
-
-DODAT JOŠ NEKI OPIS NEUSPJEHA :D
+Može se primjetiti da rezultati 
 Neuspjeh izrade automatskog klasifikatora mentalnog statusa autora tekstova u ovom radu u konačnici ima optimističnu notu: s obzirom da su tekstovi uzeti od autora koji imaju dijagnozu, no u vrijeme pisanja tekstova najvjerojatnije nisu bili u akutnoj fazi bolesti, moguće je da utjecaj bolesti van akutne faze nije dovoljno jak da bi dovoljno ugrozio kognitivno funkcioniranje bolesnika da bi se ono očitovalo na njihovom pisanju. 
 
 Dakako, postoji mnogo prostora za poboljšanja metodološkog pristupa. U budućim istraživanjima bilo bi dobro koristiti tekstove za koje pouzdano znamo da su ih autori pisali u akutnoj fazi svoje bolesti, kada su kognitivne funkcije najviše pogođene, čime bi se povećala izglednost dobivanja uspješnijeg razlikovanja među tekstovima. Također, bilo bi dobro koristiti tekstove koji su pisani na istu temu (na tragu korištenja osobnih blogova), kako bi se smanjila mogućnost da semantički kontekst utječe na rezultate, ili pak da se lakše koriste neke potencijalno korisne semantičke značajke. Osim toga moglo bi se kontrolirati vještinu pisanja autora tekstova koristeći autore koji nisu izrazito vješti u tome kao što su profesionalni pisci, te koristiti nezavisne procjene stručnjaka za određivanje kvalitete teksta. Moguće je da bi i veći uzorak tekstova donio bolje rezultate, no problematično je njegovo prikupljanje s obzirom na malu populaciju oboljelih. Također, mogle bi se koristiti još neke značajke, a čija je implementacija bila preopširna za okvire ovog rada: frekvencije izraza \engl{term frequency, TF}, inverzne frekvencije dokumenta \engl{inverze document frequency} i njihovih međuodnosa sa frekvencijom funkcijskih riječi.
