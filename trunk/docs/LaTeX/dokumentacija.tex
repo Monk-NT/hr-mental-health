@@ -87,7 +87,7 @@ značajke koje se izvlače su:
 \item Postotak različitih riječi u tekstu,
 \item Prosječna dužina riječi u tekstu.
 \end{enumerate}
-Potrebno je napomenuti da nisu korišteni svi postojeći interpunkcijski znakovi znakovi engleskog jezika, već nešto manja grupa koja se sastoji od:
+Potrebno je napomenuti da nisu korišteni svi postojeći interpunkcijski znakovi engleskog jezika, već nešto manja grupa koja se sastoji od:
 točke (.),
 upitnika (?),
 uskličnika (!),
@@ -100,16 +100,17 @@ Može se primjetiti da nismo koristili znakove navoda, kao ni crticu zbog razli�
 \subsection{Metode klasifikacije}
 
 Provedba postupaka strojnog učenja na obrađenim tekstovima rađena je u programskom alatu \emph{Weka} (REF), koji podržava velik broj algoritama analize podataka i prediktivnog modeliranja. S obzirom na jednostavnost uporabe različitih metoda analize u \emph{Weka}-i korišteno ih je nekoliko te su uspoređeni rezultati.  
-SVM+
-, decision tree
-, neuronske mreže
-, bayes+
 
-\emph{Naivni Bayesov klasifikator} pridjeljuje primjeru onu klasu za koju je vjerojatnost najveća na temelju njegovog vektora svojstava, uz pretpostavku da su svojstva nezavnisna i temelji se na Bayesovom teoremu\ref{bayes-63}. Iako je jako jednostavan klasifikator, koji počiva na često pogrešnoj pretpostavci o nezavisnosti svojstava, u upotrebi redovito daje dobre rezultate \ref{hand-yu}.
+, neuronske mreže
+
+
+\emph{Naivni Bayesov klasifikator} pridjeljuje primjeru onu klasu za koju je vjerojatnost najveća na temelju njegovog vektora svojstava, uz pretpostavku da su svojstva nezavnisna i temelji se na Bayesovom teoremu\cite{bayes-63}. Iako je jako jednostavan klasifikator, koji počiva na često pogrešnoj pretpostavci o nezavisnosti svojstava, u upotrebi redovito daje dobre rezultate \cite{hand-yu}.
 
 \emph{Stroj s potpornim vektorima} \engl{Support Vector Machine, SVM} je nadzirana metoda strojnog učenja koja se temelji na konstrukciji hiperravnine ili hiperravnina koje odjeljuju primjere. Hiperravnine se pronalaze traženjem \emph{potpornih vektora}, tj.~onih primjera koji pripadaju različitim klasama, a najmanje su međusobne udaljenosti. NEMOGU PRONAĆ ORIGIGI RAD BAJ VAPNIK I NEKA ZENSKA SA KUL IMENOM KOJE SAM ZABORAVIJA, A VAPNIK SAM ZAPAMTIJA JER SMO MORALI ZNAT VAPNIK-CHMELJA DIMENZIJU
-NAPISATI O SVAKOJ DVE REČENICE (OSNOVNA IDEJA)
 
+\emph{Stabla odluke} su neparametarska, diskriminativna metoda aproksimiranja funkcije diskretnih vrijednosti, koja se temelji na izgradnji stabla kao grafičke reprezentacije ako-onda pravila \cite{mojaBaba}.
+
+\emph{Umjetne neuronske mreže} \engl{artifical neural networks} su mreže međusobno povezanih \emph{neurona}, nezavisnih isprogramiranih djelova koji obavljaju neku jednostavnu funkciju, da bi kao cjelina obavljali složeniju zadaću. Osnovni model umjetne neuronske mreže je perceptron \cite{rosenblatt-58}.
 \section{Rezultati}
 
 Podaci za analizu napravljeni su iz uzorka tekstova koji čine tekstovi poznatih pisaca i tekstovi prikupljeni sa blogova, oboje iz engleskog govornog područja. Psihički poremećaji kod pisaca (bipolarni poremećaj i depresija) identificirani su detaljnom analizom njihovih dostupnih biografija, te su u uzorak uzeti oni tekstovi koji se bave upravo autorovim osvrtom na psihičku bolest (ukoliko takvi postoje) ili su pisani u vremenskom razdoblju najbližem onom u kojem je poremećaj identificiran. Tekstovi pisaca koji ne pate od depresije, bipolarnog poremećaja ili shizofrenije odabrani su također analizom biografija, uz preferenciju prema opširnim biografijama te onima u kojima se spominje nego drugo zdravstveno stanje autora, nevezano uz psihičku bolest.
@@ -129,7 +130,7 @@ tabliceeee
 DODAT JOŠ NEKI OPIS NEUSPJEHA :D
 Neuspjeh izrade automatskog klasifikatora mentalnog statusa autora tekstova u ovom radu u konačnici ima optimističnu notu: s obzirom da su tekstovi uzeti od autora koji imaju dijagnozu, no u vrijeme pisanja tekstova najvjerojatnije nisu bili u akutnoj fazi bolesti, moguće je da utjecaj bolesti van akutne faze nije dovoljno jak da bi dovoljno ugrozio kognitivno funkcioniranje bolesnika da bi se ono očitovalo na njihovom pisanju. 
 
-Dakako, postoji mnogo prostora za poboljšanja metodološkog pristupa. U budućim istraživanjima bilo bi dobro koristiti tekstove za koje pouzdano znamo da su ih autori pisali u akutnoj fazi svoje bolesti, kada su kognitivne funkcije najviše pogođene, čime bi se povećala izglednost dobivanja uspješnijeg razlikovanja među tekstovima. Također, bilo bi dobro koristiti tekstove koji su pisani na istu temu (na tragu korištenja osobnih blogova), kako bi se smanjila mogućnost da semantički kontekst utječe na rezultate, ili pak da se lakše koriste neke potencijalno korisne semantičke značajke. Osim toga moglo bi se kontrolirati vještinu pisanja autora tekstova koristeći autore koji nisu izrazito vješti u tome kao što su profesionalni pisci, te koristiti nezavisne procjene stručnjaka za određivanje kvalitete teksta. Također, mogle bi se koristiti još neke značajke, a čija je implementacija bila preopširna za okvire ovog rada: NPR
+Dakako, postoji mnogo prostora za poboljšanja metodološkog pristupa. U budućim istraživanjima bilo bi dobro koristiti tekstove za koje pouzdano znamo da su ih autori pisali u akutnoj fazi svoje bolesti, kada su kognitivne funkcije najviše pogođene, čime bi se povećala izglednost dobivanja uspješnijeg razlikovanja među tekstovima. Također, bilo bi dobro koristiti tekstove koji su pisani na istu temu (na tragu korištenja osobnih blogova), kako bi se smanjila mogućnost da semantički kontekst utječe na rezultate, ili pak da se lakše koriste neke potencijalno korisne semantičke značajke. Osim toga moglo bi se kontrolirati vještinu pisanja autora tekstova koristeći autore koji nisu izrazito vješti u tome kao što su profesionalni pisci, te koristiti nezavisne procjene stručnjaka za određivanje kvalitete teksta. Također, mogle bi se koristiti još neke značajke, a čija je implementacija bila preopširna za okvire ovog rada: frekvencije izraza \engl{term frequency, TF}, inverzne frekvencije dokumenta \engl{inverze document frequency} i njihovih međuodnosa sa frekvencijom funkcijskih riječi.
 
 
 \section{Zaključak}
