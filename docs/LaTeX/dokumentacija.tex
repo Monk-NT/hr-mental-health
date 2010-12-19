@@ -57,7 +57,7 @@ Rješavanje ovog problema donekle je slično rješavanju problema određivanja i
 
 Govoreći o duljini tekstova potrebnoj da bi raznolikost rječnika bila stabilno određena i predstavljala potencijalno dobru značajku, \citet{tweedie} navode da je minimalna potrebna duljina 1000 riječi.
 
-U našem radu, za razliku radova \citep{strous-2009} i \citep{exray}, korišteni su tekstovi koje su napisali profesionalni pisci i autori blogova, čime pokušavamo utvrditi koliko su pokazatelji navedenih psihičkih bolesti u tekstu prožimajući u životu ljudi s tim poremećajima - budući da se radi o ljudima koji su u vrijeme pisanja očito adekvatno funkcionirali da bi mogli objaviti knjigu, odnosno održavati blog. Koristili smo i veći broj značajki i pokušati utvrditi koje najviše doprinose uspješnosti klasifikacije (JESMO LI?). Korištene značajke bazirane su na onima navedenima u \citep{kristo}, koje su odabrane na temelju moguće povezanosti sa simptomima psihičkih poremećaja.
+U našem radu, za razliku radova \citep{strous-2009} i \citep{exray}, korišteni su tekstovi koje su napisali profesionalni pisci i autori blogova, čime pokušavamo utvrditi koliko su pokazatelji navedenih psihičkih bolesti u tekstu prožimajući u životu ljudi s tim poremećajima - budući da se radi o ljudima koji su u vrijeme pisanja očito adekvatno funkcionirali da bi mogli objaviti knjigu, odnosno održavati blog. Koristili smo i veći broj značajki i pokušali utvrditi koje najviše doprinose uspješnosti klasifikacije (JESMO LI?). Korištene značajke bazirane su na onima navedenima u \citep{kristo}, koje su odabrane na temelju moguće povezanosti sa simptomima psihičkih poremećaja.
 
 
 \section{Klasifikacija mentalnog statusa autora koristeći tekstove}
@@ -99,7 +99,7 @@ Može se primjetiti da nismo koristili znakove navoda, kao ni crticu zbog razli�
 
 \subsection{Metode klasifikacije}
 
-Provedba postupaka strojnog učenja na obrađenim tekstovima rađena je u programskom alatu \emph{Weka} \footnote{\texttt{http://www.cs.waikato.ac.nz/ml/weka/}}, koji podržava velik broj algoritama analize podataka i prediktivnog modeliranja. S obzirom na jednostavnost uporabe različitih metoda analize u \emph{Weka}-i korišteno ih je nekoliko te su uspoređeni rezultati.  
+Provedba postupaka strojnog učenja na obrađenim tekstovima rađena je u programskom alatu \emph{Weka} \footnote{\texttt{http://www.cs.waikato.ac.nz/ml/weka/}}, koji podržava velik broj algoritama analize podataka i prediktivnog modeliranja. S obzirom na jednostavnost uporabe različitih algoritama nadziranog učenja u \emph{Weka}-i korišteno ih je nekoliko te su uspoređeni rezultati.  
 
 , neuronske mreže
 
@@ -110,7 +110,7 @@ Provedba postupaka strojnog učenja na obrađenim tekstovima rađena je u progra
 
 \emph{Stabla odluke} su neparametarska, diskriminativna metoda aproksimiranja funkcije diskretnih vrijednosti, koja se temelji na izgradnji stabla kao grafičke reprezentacije ako-onda pravila \cite{mojaBaba}.
 
-\emph{Umjetne neuronske mreže} \engl{artifical neural networks} su mreže međusobno povezanih \emph{neurona}, nezavisnih isprogramiranih djelova koji obavljaju neku jednostavnu funkciju, da bi kao cjelina obavljali složeniju zadaću. Osnovni model umjetne neuronske mreže je perceptron \cite{rosenblatt-58}.
+\emph{Umjetne neuronske mreže} \engl{artifical neural networks} su mreže međusobno povezanih \emph{neurona}, nezavisnih isprogramiranih djelova koji obavljaju neku jednostavnu funkciju, da bi kao cjelina obavljali složeniju zadaću. Osnovni model umjetne neuronske mreže je perceptron \cite{rosenblatt-58}I OVA REFERENCA NE VALJA.
 
 
 \section{Rezultati}
@@ -121,9 +121,12 @@ Blogovi autora koji imaju neki psihički poremećaj pronađeni su preko web-stra
 
 Radi odsutnosti dovoljnog broja poznatih pisaca koji boluju od shizofrenije ta skupina nije prikupljena, kao ni skupina tekstova autora blogova koj boluju od depresije, zbog ponekad olakog korištenja riječi depresija u svakodnevnom govoru i time uzrokovane pretpostavljene niske pouzdanosti procjene stvarne depresivnosti kod autora. Tako su se podaci za treniranje i testiranje sastojali od šest kategorija: poznati pisci s bipolarnim poremećajem, poznati pisci koji boluju od depresije, poznati pisci bez identificiranog psihičkog poremećaja, autori blogova s dijagnosticiranom shizofrenijom, autori blogova oboljeli od bipolarnog poremećaja i autori blogova bez identificiranog psihičkog poremećaja. Slijedeći kriterij o 3 do 5 puta većem broju primjera u pojedinoj kategoriji od broja značajki \citep{ribaric} u svakoj kategoriji skupa podataka za treniranje prikupljeno je 20 primjera, osim u kategoriji blogova autora sa shizofrenijom, gdje ih zbog loše dostupnosti ima 14. U skupu podataka za testiranje svaka je kategorija imala 15 primjera, osim, ponovno, kategorije blogova autora sa shizofrenijom, u kojoj ih ima 12. 
 
-Dužina teksta varirala je od ???? do ????, a u prosjeku iznosila ?????. Sve značajke određivane su uzimajući u obzir duljinu teksta. BILI DUŽI OD 1000 UGLAVNOM ZBOG REF U KRIŠTO
+Veličina tekstova varirala je od 3 kB do 24 kB, te su snimani u ANSI standardu. Pretežno su imali iznad 5 kB, kada god je ta količina teksta bila dostupna, što odgovara graničnoj vrijednosti od 1000 riječi potrebnih za ispravnost nekih značajki  \citep{tweedie}. Sve značajke određivane su uzimajući u obzir duljinu teksta. 
 
 OPIS 10-FOLD CROSS-VALIDATION, PA TESTIRANJE
+
+
+SVM je u Weki korišten pomoću biblioteke WLSVM \footnote{\texttt{www.cs.iastate.edu/~yasser/wlsvm}} \citep{yh05}.
 
 tabliceeee
 
