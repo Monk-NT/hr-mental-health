@@ -123,7 +123,7 @@ Radi odsutnosti dovoljnog broja poznatih pisaca koji boluju od shizofrenije ta s
 
 Veličina tekstova varirala je od 3 kB do 24 kB, te su snimani u ANSI standardu. Pretežno su imali iznad 5 kB, kada god je ta količina teksta bila dostupna, što odgovara graničnoj vrijednosti od 1000 riječi potrebnih za ispravnost nekih značajki  \citep{tweedie}. Sve značajke određivane su uzimajući u obzir duljinu teksta. 
 
-OPIS 10-FOLD CROSS-VALIDATION, PA TESTIRANJE
+K-prolazna kros validacija \engl{K-fold cross validation} je tehinika korištena u strojnom učenju gdje se skup za treniranje podjeli na K nasumičnih skupova. Tada se treniranje vrši na $K-1$ skupova a jedan skup ostaje za validaciju dobivenog rezultata. Proces se ponavlja K puta tako da svaki put drugi skup bude izostavljen za validaciju. U ovom radu je korištena 10-prolazna kros validacija. Testiranje dobivenih modela je izvršeno na odvojenim skupovima za testiranje.
 
 
 SVM je u Weki korišten pomoću biblioteke WLSVM \footnote{\texttt{www.cs.iastate.edu/~yasser/wlsvm}} \citep{yh05}.
