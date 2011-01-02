@@ -44,7 +44,13 @@ Sonjin komentar:
 4. da, moramo ukljuèit još neku mjeru. samo, kaj je funkcija gubitaka, lol?
 5. niš
 
+------------------------------------------------------
 
+Veljko:
+1. da, u drugom radu.
+2. tf-idf u drugom radu.
+3. I to bi bilo lijepo napravit. Mozda cak u ovom radu.
+4. Mislim da se kaze MATRICA gubitka.
 
 ------------------------------------------------------
 Reviewer B:
@@ -89,7 +95,14 @@ Sonjin komentar:
 2. ne znam kaj bih tu rekla, ne znam na koje metode misli. mogu dodat reèenicu da je preliminarnim istraživanjima pokazano da su druge metode lošije (ko iz Šnajderove upute)
 3. da, dodat æu referenciranje na tablicu i opise tablica, to fali. ma ti rezultati su generalno loši.
 
+------------------------------------------------------
 
+Veljko:
+1. Iskreno, gledajuci druge clanke, procedingse i sranja, nema nekog pravila. U principu uvik ima rezultati/zakljucak ali sta pise tamo stvarno ovisi. Nema standarda. Mislim da postoje ipak neke slobode u pisanju clanka, koliko god znanstevni radovi bili kruti i omedjeni. Ukratko, ovo spada u osobni gust i smisao pisca/rencenzeta/betmena.
+2. S obzirom da ce ovo sonja citat samo: ti si kreten. SKEPTICIZAM i OBJEKTIVNOST nemaju veze jedno s drugim. Upute zahtjevaju objektivnost, ne skepticizam. Skepticizam je opravdanje za bit zla pizda.
+3. Latex. Latex.... Latex.
+
+Nevidim kako je pretencioznost vezana uz tipkarske greske?
 
 ------------------------------------------------------
 Reviewer C:
@@ -118,7 +131,12 @@ Sonjini komentari:
 
 4. tablice - latex, jbg :D
 
+------------------------------------------------------
 
+Veljko:
+1. Nemam pojma koje druge literature. Nase druge literature?
+2. fala
+3. Ok, sve je to divno i krasno, ali ne. Provodi se istrazivanje na drugacijim uzorcima. I provodi se neka nova klasifikacija. Zelis vidit radi li sa rjesenjima nekog slicnog problema.
 ------------------------------------------------------
 Reviewer D:
 
@@ -184,6 +202,16 @@ Sonjini komentari:
 (pravopisne komentare sam obrisala, to æu sredit sve)
 
 ------------------------------------------------------
+1. Ow nou, nismo naglasili da ce se koristi strojno ucenje. Jesi ti zbunjen?
+2. To zapravo nisu srodni radovi?
+3. ok. A mozda i ne. Opet, mislim da je pitanje stila. Ako uvod i sve ima dobru razumljivost, onda cemu dijeliti?
+4. Mogu izvuc, ali mislim da nije bitno.
+5. Tu se slazem bilo bi baza :D
+6. Da, bilo bi.
+7. Ali pravih srodnih radova NEMA. Kao ni vremena.
+8. NEMA PRAVIH SRODNIH RADOVA ILI IH JE MALO I PROVEDENI SU DRUGACIJE.
+9. ok.
+------------------------------------------------------
 Reviewer E:
 
 Komentari na rad:
@@ -219,6 +247,12 @@ Sonjini komentari:
 4. aha, da, nije jasno da su oni postoci bili jako mali pa su normalizirani. ajd, vidjet æu tu što se može.
 
 ------------------------------------------------------
+
+1. Nepotrebno je biti i analan i kao komentator b. Ali ipak ima takvih.
+2. SONJA JE NAPISALA FANTASTICAN KOMENTAR REZULTATA! ISPRICAJ SE ZA RIJEC "CINI"!
+3. ...no
+4. Jeste ti i komentator b u rodu?
+------------------------------------------------------
 Reviewer F:
 
 
@@ -245,7 +279,11 @@ daljnjih istraživanja na ovu temu.
 Sonjini komentari:
 nemam
 
-
+-----------------------------------------------------
+Veljko:
+1. kewl
+2. 
+3. Mama ti nije dobra...
 ------------------------------------------------------
 Reviewer G:
 
@@ -268,5 +306,9 @@ nerazumljiva.
 
 Sonjini komentari:
 dodat opis rezultata, da. niš drugo konkretno
+
+------------------------------------------------------
+Veljko:
+haha neko nije procita upute recenzenta :D
 
 
