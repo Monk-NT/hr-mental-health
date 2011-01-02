@@ -1,0 +1,272 @@
+Reviewer A:
+
+
+Komentari na rad:
+       Osvrt
+U radu je obavljeno istraživanje o moguænostima izrade algoritma za
+klasifikaciju mentalnog zdravlja autora analizom njihovih tekstova. Rad se
+orijentira na usporedbu razlièitih algoritama klasifikacije i usporedbu
+rezultata.  Autori su vrlo uspješno predstavili svoju metodu. Odabrani
+algoritmi klasifikacije i metode ekstrakcije znaèajki u skladu su s
+recentnim istraživanjima u podruèju automatske kategorizacije dokumenata.
+Kao jedini manji nedostatak rada moguæe je izdvojiti korištenje toènosti
+kao jedine mjere vrednovanja klasifikatora. Preciznost, odziv i F1 mjera
+omoguæili bi bolji uvid u sam rad algoritma.
+
+Glavni komentari:
+1. Za izraèun broja razlièitih rijeèi u praksi se korisnim pokazalo
+korištenje stemmera (npr. Lovins, Porter i sl.) Zanimljivo bi bilo
+promotriti utjecaj stemminga na toènost klasifikacije na vašem problemu.
+2. Ukljuèivanje tf-idf težina u skup znaèajki vrlo se jednostavno obavlja
+u Weki korištenjem StringToWordVector Filtra. Jedini preduvjet za to je da
+se dokumenti koji se kategoriziraju nalaze u izvornom obliku u .arff formatu
+(ili nekom drugom kojeg podržava Weka). Ukoliko nastaviti istraživanja na
+ovu temu, na taj bi naèin mogli vrlo jednostavno izgraditi ekstraktor
+znaèajki.
+3. Takoðer, u Weki je moguæe vrlo jednotavno obaviti selekciju znaèajki
+na temelju informacijske dobiti ili neke druge mjere. Na taj bi naèin mogli
+lakše provjeriti koji skupovi znaèajki više utjeèu na ispravnu
+klasifikaciju (ovo takoðer nije primjedba, nego dobronamjerni savjet :))
+4. U podruèju pretraživanja informacija, èesto se za evaluaciju korite
+preciznost, odziv i f1 mjera, a ne samo toènost. Razlog tome je što daju
+bolji uvid u rad klasifikatora (npr. kako radi s razredima koji imaju manje
+primjera za uèenje). U vašem sluèaju, pametno bi bilo ukljuèiti i druge
+mjere buduæi da vam funkcija gubitaka zbog pogrešne klasifikacije nije
+simetrièna.
+5. U jeziènom i gramatièkom smislu, sve pohvale za rad!
+
+------------------------------------------------------
+
+Sonjin komentar: 
+1. stemming - bilo bi, ali ne u ovom radu, ali možemo spomenut u na prezentaciji kao projedloge za poboljšanje
+2. lol, da, ali ne u ovom radu
+3. e ovo bi fakat mogli napravit
+4. da, moramo ukljuèit još neku mjeru. samo, kaj je funkcija gubitaka, lol?
+5. niš
+
+
+
+------------------------------------------------------
+Reviewer B:
+
+Komentari na rad:
+       U okviru ovog rada, autori su pokušali na temelju analize teksta otkriti
+kakvo je mentalno zdravlje pisaca. U tome su korištene tri metode
+klasifikacije SVM, naivni Bayesov klasifikator, naivni
+Bayesov klasifikator s procjenom jezgrene funkcije. Rezultati nisu apsolutno
+precizni što se može povezati s neispravnim odabirom metoda za
+klasifikaciju.
+
+(1) Najveæe primjedbe imam na strukturu rada. Smatram da je uvod
+predugaèak zbog pretjerano detaljnog uvoðenja u samu problematiku.
+Potencijalno rješenje je uklopiti paragraf o bolestima i simptomima u
+odjeljak sa srodnim radovima, s obzirom da se na njih stalno referencira dok
+bih dio s opisom automatskog klasifikatora prebacio u odjeljak 3. Takoðer,
+posljednji paragraf u odjeljku srodni radovi bih premjestio u odjeljak 3.
+jer se u ovom poglavlju potrebno samo osvrnuti na srodne radove. U odjeljku
+4. imenovanom Rezultati smatram da se ne treba opisivati na pola stranice
+o tome kako su odabrani tekstovi veæ da se to treba napraviti ranije, a
+ovdje se osvrnuti iskljuèivo na rezultate. (2) Zanimljiv mi je
+optimistièan osvrt na rezultate (posljednji odjeljak odjeljka 4.), no zbog
+visoke razine skepticizma s kojom pišem recenzije (a do èega su me dovele
+iskljuèivo upute za pisanje recenzija) ne mogu se oteti dojmu da su
+vjerojatno u klasifikaciji korištene krive metode te da bi bilo dobro
+ispitati problem s drugim metodama. Tim više što objašnjenje zašto neke
+druge metode nisu korištene nije dano u radu. Cijenim što su autori
+svjesni moguæih poboljšanja što su i koncizno opisali. (3) Unutar teksta
+ne postoji referenciranje na konkretnu tablicu s rezultatima, a njihovo
+smještanje na cijelu stranicu ispod teksta sa stranicama èini analizu
+rezultata nepregledom.
+
+Zbog želje za pretencioznošæu došlo je do pravopisnih grešaka (Uvod,
+"...jednu ideju i NJEZIO"; Srodni radovi, "...bavilo se nekoliko RADOVI") i
+korištenja manje poznatih izraza poput
+"prevalencija" bez objašnjenja tog medicinskog pojma.
+
+------------------------------------------------------
+Sonjin komentar:
+1. pogledat æu to, možda ima neki point. ne slažem se da bolesti treba micati iz uvoda. ovo sa zadnjim poglavljem srodnih se ne slažem. u vezi ovog da su nam opis skupljanja tekstova ranije, slazem se, ali Snajderova uputa je drugacija. po meni, Snajderova ne valjda, pa cu vjerojatno to prebacit, da.
+2. ne znam kaj bih tu rekla, ne znam na koje metode misli. mogu dodat reèenicu da je preliminarnim istraživanjima pokazano da su druge metode lošije (ko iz Šnajderove upute)
+3. da, dodat æu referenciranje na tablicu i opise tablica, to fali. ma ti rezultati su generalno loši.
+
+
+
+------------------------------------------------------
+Reviewer C:
+
+Komentari na rad:
+       Cilj ovog rada je pokazati da li se raèunalo može nauèiti prepoznati
+bolest od koje boluje autor nekog teksta.
+
+1.Izbor klasifikatora bi mogao biti veæi. Uzeti su klasifikatori provedeni
+u drugima literaturama. Isprobani su samo SVM i Bayes dok su se mogli
+isprobati neki novi klasifikatori kako bi se pokušali dobiti bolji
+rezultati.
+2. Znaèajnost, originalnost, relevantnost i referenciranje rada su na vrlo
+visokoj razini.
+3. Iz samog èitanja rada imam osjeæaj da se uzimalo premalo znaèajki, te
+se možda trebalo izmisliti neke svoje znaèajke pa testirati i vidjeti da
+li æe doæi do veæeg postotka prepoznavanja
+
+Sveukupan dojam rada mi se svidio osim tablica. Ne shvaæam zašto su
+navedene na zadnjoj stranici, a ne u poglavlju rezultati.
+
+------------------------------------------------------
+Sonjini komentari:
+1. napisat æu one preliminarne ko za recenzenta B
+3. je, ali tu nemremo niš, stavit æemo u prezentaciju da smo imali ogranièen uzorak i zbog toga uzeli samo par znaèajki
+
+4. tablice - latex, jbg :D
+
+
+------------------------------------------------------
+Reviewer D:
+
+Komentari na rad:
+       Rad opisuje izradu automatskog klasifikatora za klasifikaciju nekoliko
+mentalnih stanja korištenjem pisanih tekstova. Pri klasifikaciji se koriste
+sintaksne znaèajke tekstova, a ispitivanje se provodi na tekstovima blogova
+i profesionalnih pisaca. Dobiveni rezultati upuæuju na pozitivan trend
+(pogotovo oni ogranièeni na usporedbu samo dvije klase mentalnih stanja),
+ali još uvijek ima dosta mjesta za napredak. Rad se istièe zanimljivom
+temom koja pokušava riješiti praktièan problem dijagnosticiranja
+mentalnih poremeæaja. Posebno je zanimljiv prijedlog korištenja znaèajki
+teksta èija povezanost s mentalnim poremeæajima nije dokazana, ali njihova
+neadekvatna obraðenost narušava kvalitetu rada.
+
+Glavni komentari na rad:
+1. U uvodu je preslabo naglašena strana strojnog uèenje, spominje se tek u
+cilju rada i pri opisu automatskog klasifikatora i njegove izrade. Detaljan
+opis treniranja klasifikatora, koji je u èlanku, nije potreban, nego bi
+više trebalo naglasiti praktiènu korist koja bi se ostvarila njegovom
+izradom. Takoðer, posveæenost formalnim karakteristikama teksta se
+spominje prije nego se objasni da je cilj rada izrada klasifikatora, a
+nadilaženje okvira rada za analizu semantièkog aspekta možda objasniti u
+jednoj reèenici (npr. zbog velike složenosti tog pristupa).
+2. Za srodne radove koji se bave prepoznavanjem autora nisu dani brojèani
+rezultati njihove uspješnosti. Komentar o meðusobnoj razlici u
+uspješnosti triju pristupa iz Coyotl-Morales et al. bi mogao biti
+zanimljiv, ako je prisutan u radu, i komentar koji pristup se koristi u
+radu, a koji bi možda najbolje odgovarao.
+3. Odjeljak rezultati je dugaèak i obraðuje nekoliko tema, pa bi ga
+valjalo podijeliti u primjerice opis skupova i komentare rezultata.
+4. U opisu skupova za velièinu tekstova koristi se podataka o zauzeæu u
+kB, bilo bi bolje da se koristi broj rijeèi, jer daje bolji osjeæaj koliko
+su tekstovi veliki.
+5. Nedostaje opis ili barem spomen korištene mjere u tekstu s rezultatima.
+Takoðer, bilo bi dobro da su korištene mjere preciznosti, odziva i F1 po
+klasama.
+6. Bolje bi bilo da su tablice pojedinaèno komentirane (i referencirane),
+uz konaènu analizu danu na kraju.
+7. Utjecaj znaèajki èija veza s mentalnim poremeæajima nije utvrðena
+nije dovoljno detaljno obraðen. Detaljnija obrada tog utjecaja i
+komentiranje uzroka tih utjecaja znaèajno bi doprinijelo originalnosti i
+ukupnoj kvaliteti rada, pogotovo jer se utvrðivanje doprinosa znaèajki
+spominje u srodnim radovima!!!
+8. Nedostaje usporedba sa srodnim radovima.
+9. Diskusija rezultata u zakljuèku, gdje se usporeðuju postotci, bi
+trebala biti preseljena u odjeljak s rezultatima, a u zakljuèku bi trebala
+biti dana samo opisna ocjena rezultata.
+
+
+------------------------------------------------------
+Sonjini komentari:
+1. ne kužim baš kaj hoæe, vratim se na taj
+2. dodat æu uspješnost kod Krišto. za ovo koji pristup se koristio a koji bi bio bolji - hm, ne znam, nismo koristili neki odreðeni, to nam je bilo više kao izvor moguæih znaèajki. možda dodam da smo mi od tih koristili one èije izvlaèenje nije bilo prekomplicirano za ovaj rad.
+3. bi, ok
+4. a jbg meni se to neda izvlaèit :) oš ti? ne znam kolko je bitno ipak.
+5. opet mjere, da. 
+6. da, apsulutno, bit æe.
+7. e da, ovo je gadno, trebalo bi napisat, ali ja nemam pojma zakaj su te neke znaèajke bile znaèajne. al ok, tu treba nekaj dodati, definitivno.
+8. say what? (nisu iste metode, nema baš smsila usporeðivat naše i njihove brojke, ja mislim)
+9. ok, slažem se. 
+
+(pravopisne komentare sam obrisala, to æu sredit sve)
+
+------------------------------------------------------
+Reviewer E:
+
+Komentari na rad:
+       Ovim radom autori su nastojali pokazati kako se  strojno uèenje može
+koristiti u raznovrsne svrhe, u ovom sluèaju je rijeè o klasifikaciji
+mentalnog statusa osobe na temelju pisanog teksta autora tog teksta. U ovom
+sluèaju klasifikacija se provodila u sljedeæe kategorije:autori oboljeli
+od shizofrenije, autori oboljeli od depresije, autori oboljeli od bipolarnog
+poremeæaja te autori koji nisu psihièki bolesni. Prilikom rada korišten
+je SVM, naivni Bayes te naivni Bayes s procjenom jezgrene funkcije. Rad je
+veoma zanimljiv te je pun relevantnih referenci o sliènim problemima.
+Korištene znaèajke su dobro elaborirane te rezultati dobro interpretirani.
+
+
+
+1.      Nepotrebno je definirati što je to klasifikacija u uvodu
+2.      Komentar rezultata se èini ispravnim, ali ipak ne bi trebao biti u
+zakljuèku koji ima svoju funkciju.
+3.      Tijekom teksta se spominju razlièite znaèajke, bilo bi korisno da
+postoji neka tablica u kojoj se vidi otprilike kako izgledaju te znaèajke
+dobivene na temelju primjera za uèenje jer se na taj naèin može vidjeti
+kvaliteta skupa za uèenju u odnosu na druge sliène radove
+4.      Meni nije jasno kako je normalizacija provedena jer jedina stvar koja se
+normalizira(po mojem mišljenju) je prosjeèna duljina rijeèi pa možda
+jedna reèenica koja to opisuje.
+
+------------------------------------------------------
+Sonjini komentari:
+
+1. or is it? :)
+2. slažem se, promijenit æu
+3. hm, pa mogli bismo stavit neki grafiæ od onih iz weke, ili tablicu neku s prosjecima po grupama
+4. aha, da, nije jasno da su oni postoci bili jako mali pa su normalizirani. ajd, vidjet æu tu što se može.
+
+------------------------------------------------------
+Reviewer F:
+
+
+Komentari na rad:
+       Rad se bavi klasifikacijom mentalnog zdravlja autora uzimajuæi u obzir
+formalne znaèajke napisanog teksta. Cilj mu je istražiti je li takvu
+klasifikaciju moguæe koristiti u dijagnostici pacijenata. Za razliku od
+srodnih radova, ovaj rad pokušava klasificirati pacijente u odnosu na više
+klasa, što vjerojatno utjeèe i na èinjenicu da su rezultati dobiveni u
+ovom radu za nijansu slabiji od onih u srodnim radovima.
+
+1. Rad je zaista originalan. Tema rada me iznenadila i pretpostavka rada da
+je moguæe klasificirati bolesnike na temelju analize teksta bi se mogla
+pokazati korisnom.
+2. Rad je dobro napisan, no poprilièan broj pravopisnih i gramatièkih
+pogreški umanjuje dojam prezentacije rada.
+3. Iako dobiveni rezultati nisu previše dobri, rad je sveukupno odlièan.
+Zanimljiv je, originalan i svakako budi želju vidjeti rezultate eventualnih
+daljnjih istraživanja na ovu temu.
+
+
+------------------------------------------------------
+
+Sonjini komentari:
+nemam
+
+
+------------------------------------------------------
+Reviewer G:
+
+Komentari na rad:
+       Rad se bavi prouèavanjem i klasificiranjem tekstova kojih su autori osobe
+sa psihièkim poremeæajima s obzirom na odreðene, nesemantièke, znaèajke
+koje dovode u vezu tekst sa poremeæajima.
+Tema rada je intrigantna i daje podlogu za mnoga slièna razmatranja, iako
+rezultati ovog rada nisu posebno uspješni.
+Smatram kako bi možda drugaèije i specifiènije znaèajke za pojedine
+bolesti bile uspješnije i davale bolje rezultate. Ali isto tako ove
+znaèajke nisu zanemarive buduæi da æe, možda u manjoj mjeri, doprinijeti
+klasificiranju sa specifiènijim znaèajkama.
+Rezultati rada nisu posve doraðeni, više se orjentiralo na opis
+klasifikatora i njihovog funkcioniranja.
+Gramatièki bih ispravila prvu reèenicu u poglavlju 2, odlomak 6 koja je
+nerazumljiva.
+
+------------------------------------------------------
+
+Sonjini komentari:
+dodat opis rezultata, da. niš drugo konkretno
+
+
