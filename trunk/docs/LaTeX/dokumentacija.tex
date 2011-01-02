@@ -16,16 +16,16 @@
 \title{Klasificiranje mentalnog zdravlja autora analizom teksta }
 
 %VAŽNO: Zakomentirajte sljedeću liniju kada šaljete rad na recenziju
-%\name{Sonja Grđan, Veljko Srdarević} 
+\name{Sonja Grđan, Veljko Srdarević} 
 
 \address{
 Sveučilište u Zagrebu, Fakultet elektrotehnike i računarstva\\
 Unska 3, 10000 Zagreb, Hrvatska\\ 
-%\texttt{\{sonja.grdan,veljko.srdarevic\}@fer.hr}\\
+\texttt{\{sonja.grdan,veljko.srdarevic\}@fer.hr}\\
 }
           
          
-\abstract{Proučavanje psihičkih poremećaja nudi raznovrsne informacije o funkcioniranju ljudskog mozga, a takve podatke moguće je analizirati i široko primjenjivim metodama strojnog učenja. U ovom radu proučavani su pisani tekstovi kao reprezentanti kognitivnog funkcioniranja ispitanika različitog mentalnog statusa (autori oboljeli od shizofrenije, bipolarnog poremećaja, depresije i kontrolne skupina bez navedenih poremećaja).  Koristeći stroj s potpornim vektorima, naivni Bayesov klasifikator i naivni Bayesov klasifikator s procjenom jezgrene funkcije izgrađeni su klasifikatori tekstova autora s različitim psihičkim statusima. Dobiveni rezultati nisu potpuno očekivane točnosti, no pokazuju poboljšanje u klasifikaciji u odnosu na referentnu metodu klasificiranja u apriorno najvjerojatniju klasu, pri čemu Bayesovi klasifikatori postižu bolje rezultate. Trendovi i prijedlozi metodoloških poboljšanja prikazani u ovom radu predstavljaju poticaj daljnjem proučavanju ovog problema. }
+\abstract{Proučavanje psihičkih poremećaja nudi raznovrsne informacije o funkcioniranju ljudskog mozga, a takve podatke moguće je analizirati i široko primjenjivim metodama strojnog učenja. U ovom radu proučavani su pisani tekstovi kao reprezentanti kognitivnog funkcioniranja ispitanika različitog mentalnog statusa (autori oboljeli od shizofrenije, bipolarnog poremećaja, depresije i kontrolne skupine bez navedenih poremećaja).  Koristeći stroj s potpornim vektorima, naivni Bayesov klasifikator i naivni Bayesov klasifikator s procjenom jezgrene funkcije izgrađeni su klasifikatori tekstova autora s različitim psihičkim statusima. Dobiveni rezultati nisu potpuno očekivane točnosti, no pokazuju poboljšanje u klasifikaciji u odnosu na referentnu metodu klasificiranja u apriorno najvjerojatniju klasu, pri čemu Bayesovi klasifikatori postižu bolje rezultate. Trendovi i prijedlozi metodoloških poboljšanja prikazani u ovom radu predstavljaju poticaj daljnjem proučavanju ovog problema. }
 
 \begin{document}
 
@@ -35,56 +35,59 @@ Unska 3, 10000 Zagreb, Hrvatska\\
 
 Čovjekova želja za spoznavanjem samog sebe oduvijek je bila veliki motivator istraživanja ljudskih sposobnosti. Pritom vrijedne podatke pružaju kako proučavanja normalnih, prototipičnih pojava, tako i onih koje po nekim svojim karakteristikama odskaču po nekom od kriterija normalnosti. Mentalni poremećaji zanimljivo su područje proučavanja u kognitivnoj znanosti budući da nude mogućnost uvida u rad mozga izvan uobičajenih okvira. Oni mogu zahvaćati sve aspekte ljudskog funkcioniranja: ponašanje, emotivne doživljaje, tjelesne simptome i kogniciju. Pojedina područja različito su zahvaćena ovisno o vrsti i težini poremećaja. U ovom radu proučavane su posljedice koje neki poremećaji mogu imati na kogniciju, pa su u nastavku navedeni neki mogući simptomi shizofrenije, bipolarnog poremećaja i depresije.
 
-Shizofrenija se ističe sveobuhvatnošću mentalnih funkcija koje zahvaća, od čega ističemo promjene u mišljenju koje se očituju kao disocirano mišljenje: slijed misli bez smislene povezanosti, brzo skakanje misli s ideje na ideju, "ljepljivost" misli za jednu ideju i njezio teško mijenjanje i slično \citep{icd}. Bipolarni poremećaj primarno je poremećaj raspoloženja, no također može utjecati na kognitivne funkcije kao što su pažnja i verbalno pamćenje, rezultirajući u maničnoj fazi ubrzanim mislima i bijegom ideja: brzim promjenama teme misli, no koje u podlozi imaju logičan slijed, a nerijetko se javljaju i osjećaj velike vlastite važnosti i posebnosti. Također, dobivena je i povezanost s kreativnošću \citep{crea}. Kod depresije kognitivni simptomi su prvenstveno loša koncentracija i pesimistične, beznadne misli \citep{dsm}. Zbog jasne povezanosti procesa misli i jezika, logično je očekivati da bi se navedene karakteristike oboljelih od ovih bolesti mogle očitovati i u njihovom tekstualnom izričaju. 
+Shizofrenija se ističe sveobuhvatnošću mentalnih funkcija koje zahvaća, od čega ističemo promjene u mišljenju koje se očituju kao disocirano mišljenje: slijed misli bez smislene povezanosti, brzo skakanje misli s ideje na ideju, "ljepljivost" misli za jednu ideju i njezino teško mijenjanje i slično \citep{icd}. Bipolarni poremećaj primarno je poremećaj raspoloženja, no također može utjecati na kognitivne funkcije kao što su pažnja i verbalno pamćenje, rezultirajući u maničnoj fazi ubrzanim mislima i bijegom ideja: brzim promjenama teme misli, no koje u podlozi imaju logičan slijed, a nerijetko se javljaju i osjećaj velike vlastite važnosti i posebnosti. Također, dobivena je i povezanost s kreativnošću \citep{crea}. Kod depresije kognitivni simptomi su prvenstveno loša koncentracija i pesimistične, beznadne misli \citep{dsm}. Zbog jasne povezanosti procesa misli i jezika, logično je očekivati da bi se navedene karakteristike oboljelih od ovih bolesti mogle očitovati i u njihovom tekstualnom izričaju. 
 
 Simptomi bolesti vidljivi u mišljenju očituju se i na formalnoj i na sadržajnoj razini. Primjerice, sadržaj misli shizofrenih bolesnika može biti posve besmislen, no gramatička struktura pritom može biti očuvana. Također, misaoni tok depresivnih osoba često je zatvoren u krug tužnih, negativnih misli. U ovome radu osobita je pozornost posvećena formalnim karakteristikama teksta, budući da bi potpunija analiza semantičkog aspekta tekstova svakako nadilazila okvire ovog istraživanja. Iznimku pritom čini uzimanje u obzir vlastite važnosti kao simptoma, koja je pomoću jednostavne operacionalizacije uzeta u obzir. U usporedbi s tekstovima mentalno zdravih osoba tekstovi oboljelih mogli bi se razlikovati po nekim karakteristikama izvedenim iz simptoma, što otvara mogućnost automatskog kategoriziranja takvih tekstova. 
 
-Automatski klasifikator je računalni sustav koji na temelju značajki danih uzoraka određuje njihovu pripadnost određenim kategorijama. Izrada klasifikatora uključuje odabir i izvlačenje značajki iz uzorka, određivanje seta podataka za treniranje i testiranje, odabir algoritma klasifikacije, treniranje samog klasifikatora na podacima za treniranje, te potom testiranje njegove uspješnosti na podacima za testiranje. 
+Automatski klasifikator je računalni sustav koji na temelju značajki danih uzoraka određuje njihovu pripadnost određenim kategorijama. Izrada klasifikatora uključuje odabir i izvlačenje značajki iz uzorka, određivanje skupa podataka za treniranje i testiranje, odabir algoritma klasifikacije, treniranje samog klasifikatora na podacima za treniranje, te potom testiranje njegove uspješnosti na podacima za testiranje. 
 
-Dijagnosticiranje mentalnih bolesti zahtjevan je problem, pa bi izrada sustava koji procjenjuje pripadnost nekog teksta kategorijama bolesti i zdravlja mogla pružiti korisne dodatne informacije za dijagnostičare. Cilj rada stoga je izraditi klasifikator tekstova dobivenih od sudionika različitog mentalnog stanja (psihički zdravi, shizofreni sudionici, depresivni sudionici i sudionici s bipolarnim poremećajem). Svrha rada je provjeriti jesu li karakteristike navedenih mentalnih poremećaja dovoljno izražene na tekstovima psihički bolesnih sudionika da bi se oni razlikovali od tekstova psihički zdravih sudionika, te, ukoliko jesu, doprinijeti postupku dijagnostike.
+Dijagnosticiranje mentalnih bolesti zahtjevan je problem, pa bi izrada sustava koji procjenjuje pripadnost nekog teksta kategorijama bolesti i zdravlja mogla pružiti korisne dodatne informacije za dijagnostičare. Cilj prikazanog istraživanja bio jestoga izraditi klasifikator tekstova dobivenih od sudionika različitog mentalnog stanja (psihički zdravi, te ispitanici sa shizofrenim, depresivnim i bipolarnim poremećajem). Svrha rada je provjeriti jesu li karakteristike navedenih mentalnih poremećaja dovoljno izražene na tekstovima psihički bolesnih sudionika da bi se oni razlikovali od tekstova psihički zdravih sudionika, te, ukoliko jesu, pridonijetii postupku dijagnostike.
 
 U idućem odjeljku dan je pregled dosadašnjih istraživanja ove teme. U trećem odjeljku opisan je metodološki pristup klasifikaciji tekstova s obzirom na mentalni status autora korišten u ovom radu. U četvrtom odjeljku prikazani su alati i algoritmi korišteni za klasifikaciju te rezultati vrednovanja. Potom je u petom odjeljku iznesen zaključak, uz prijedloge za buduća istraživanja.
 
-\section{Srodni radovi}
-Problemom klasifikacije mentalnog statusa autora teksta bavilo se nekoliko radovi koji su u uzorku imali tekstove pacijenata psihijatrijskih ustanova. \citet{strous-2009} radili su automatsku klasifikaciju tekstova na temu \emph{Važna osoba u mom životu}, koje su napisali 36 shizofrenih sudionika nasuprot 36 ne-shizofrenih sudionika, pomoću stroja s potpornim vektorima \engl{support vector machine, SVM} i Bayesove regresije. Korištene se značajke najčešćih riječi, tri-grama slova (zbog specifičnosti hebrejskog jezika u kojima su gramatički značajni) i ponavljanje riječi, te je dobivena uspješnost klasifikacije tekstova 83,3\%.
+\section{Pregled dosadašnjih istraživanja}
+Problemom klasifikacije mentalnog statusa autora teksta bavilo se nekoliko istraživanja autora koji su proučavali tekstove pacijenata psihijatrijskih ustanova. \citet{strous-2009} radili su automatsku klasifikaciju tekstova na temu \emph{Važna osoba u mojem životu}, koje su napisali 36 shizofrenih sudionika nasuprot 36 ne-shizofrenih sudionika, pomoću stroja s potpornim vektorima \engl{support vector machine, SVM} i Bayesove regresije. Korištene su značajke najčešćih riječi, tri-grama slova (zbog specifičnosti hebrejskog jezika u kojima su gramatički značajni) i ponavljanje riječi, te je dobivena uspješnost klasifikacije tekstova od 83,3\%.
 
-\citet{exray} kao skup za učenje koristili su tekstove 31 shizofrenog i 16 maničnih pacijenata psihijatrijske ustanove i 9 kontrolnih sudionika, koji su bilo verbalizirali tekst koji je kasnije pretipkan, bilo sami napisali tekst. Tekstovi su bili pisani na jednu od dvije zadane teme (\emph{Piknik u parku} i \emph{Lopov}) uz zadatak da se u tekst ukomponira unaprijed određena lista riječi. Tekstovi su pretvoreni u hrpu riječi \engl{bag of words} oblik i korištena je frekvencija riječi, a učenje je izvedeno pomoću SVM i stabla odluke. Uspješnost klasifikacije shizofrene nasuprot kontrolne skupine bila je 77\%, dok u klasifikaciji koja je uključivala manične sudionike uspješnost nije bila bolja od slučajne. 
+\citet{exray} su kao skup za učenje koristili tekstove 31 shizofrenih i 16 maničnih pacijenata psihijatrijske ustanove i 9 kontrolnih sudionika, koji su bilo verbalizirali tekst koji je kasnije pretipkan, bilo sami napisali tekst. Tekstovi su bili pisani na jednu od dvije zadane teme (\emph{Piknik u parku} i \emph{Lopov}) uz zadatak da se u tekst uklopi unaprijed određena lista riječi. Tekstovi su pretvoreni u oblik hrpe riječi \engl{bag of words} i korištena je frekvencija riječi, a učenje je izvedeno pomoću SVM i stabla odluke. Uspješnost klasifikacije shizofrene nasuprot kontrolne skupine bila je 77\%, dok u klasifikaciji koja je uključivala manične sudionike uspješnost nije bila bolja od slučajne. 
 
 Rješavanje ovog problema donekle je slično rješavanju problema određivanja i/ili razlikovanja autora teksta, budući da na neki način pretpostavljamo postojanje određenih stilskih sličnosti u tekstovima autora koji pate od bipolarnog poremećaja, shizofrenije i depresije. \citet{coyotl} navode tri glavna pristupa problemu raspoznavanja autora i njima pripadne metode. Prvi pristup je usmjeren na uspoređivanje tekstova po mjerama stila, što se odnosi na značajke poput duljine riječi i rečenica i bogatstvo vokabulara, koje ovise o žanru teksta i duljini teksta. Drugi pristup koristi sintaksna obilježja kao značajke, analizirajući sintaksnu strukturu u pozadini teksta, što je najčešće računalno zahtjevno. Naposljetku, treći pristup kao značajke koristi osobine korištenih riječi u tekstu. Tako se mogu koristiti funkcijske riječi nezavisne od teme teksta, ili pristup hrpe riječi koji je dobar ukoliko postoji povezanost između autora i tema o kojima piše.
 
-
-\citet{kristo} uspješno su rješavali problem automatskog prepoznavanja autora teksta, pri čemu koriste velik broj mogućih značajki koje određuju tekst, a koje nisu ovisne o temi. Najbolje rezultate producirala je sljedeća kombinacija značajki: broj interpunkcijskih znakova, broj funkcijskih riječi, broj samoglasnika i duljine riječi.
+\citet{kristo} uspješno su rješavali problem automatskog prepoznavanja autora teksta, pri čemu su koristili velik broj mogućih značajki koje određuju tekst, a koje nisu ovisne o temi. Najbolje rezultate producirala je sljedeća kombinacija značajki: broj interpunkcijskih znakova, broj funkcijskih riječi, broj samoglasnika i duljine riječi, kojom je dobivena uspješnost klasifikacije od 88\%.
 
 Govoreći o duljini tekstova potrebnoj da bi raznolikost rječnika bila stabilno određena i predstavljala potencijalno dobru značajku, \citet{tweedie} navode da je minimalna potrebna duljina 1000 riječi.
 
-U našem radu, za razliku radova \citep{strous-2009} i \citep{exray}, korišteni su tekstovi koje su napisali profesionalni pisci i autori blogova, čime pokušavamo utvrditi koliko su pokazatelji navedenih psihičkih bolesti u tekstu prožimajući u životu ljudi s tim poremećajima - budući da se radi o ljudima koji su u vrijeme pisanja očito adekvatno funkcionirali da bi mogli objaviti knjigu, odnosno održavati blog. Koristili smo i veći broj značajki i pokušali utvrditi koje najviše doprinose uspješnosti klasifikacije. Korištene značajke bazirane su na onima navedenima u \citep{kristo}, koje su odabrane na temelju moguće povezanosti sa simptomima psihičkih poremećaja.
+U istraživanju prikazanom u ovome radu, za razliku od radova \citep{strous-2009} i \citep{exray}, korišteni su tekstovi koje su napisali profesionalni pisci i autori blogova. Time se pokušalo utvrditi koliko su pokazatelji navedenih psihičkih bolesti u tekstu prožimajući u životu ljudi s tim poremećajima - budući da se radi o ljudima koji su u vrijeme pisanja očito adekvatno funkcionirali da bi mogli objaviti knjigu, odnosno održavati blog, . Koristili smo i veći broj značajki i pokušali utvrditi koje najviše pridonose uspješnosti klasifikacije. Korištene značajke bazirane su na onima navedenima u \citep{kristo}, koje su odabrane na temelju moguće povezanosti sa simptomima psihičkih poremećaja.
 
 
-\section{Klasifikacija mentalnog statusa autora koristeći tekstove}
+\section{Klasifikacija mentalnog statusa autora korištenjem tekstova}
 
-Cilj rada pokušali smo ostvariti koristeći značajke forme teksta izvedene na temelju simptoma pojedinih psihičkih poremećaja i značajki spomenutih u srodnim radovima. Tekstove smo potom obradili generirajući numeričke vrijednosti za svaku značajku, te tako dobivene podatke o značajkama analizirali različitim algoritmima, da bismo mogli usporediti rezultate. Svaki od ovih koraka detaljnije je opisan u nastavku.
+Kako bi se klasificirao mentalni status autora, koristene su značajke forme teksta izvedene na temelju simptoma pojedinih psihičkih poremećaja i značajki spomenutih u srodnim radovima. Tekstovi su potom obrađeni generiranjem numeričke vrijednosti za svaku značajku, te tako dobiveni podatci o značajkama analizirani različitim algoritmima kako bi se mogli usporediti rezultati. Svaki od navedenih koraka detaljnije je opisan u nastavku.
 
 \subsection{Odabir značajki}
 
-Korištene su sljedeće značajke: broj različitih riječi, broj zamjenica \emph{ja}, \emph{meni}, \emph{mene} itd.~gdje je to imalo smisla, broj interpunkcijskih znakova, broj funkcijskih riječi i prosječna dužina riječi u tekstu. Prve dvije značajke mogu se dovesti u vezu sa simptomima, dok su preostale tri korištene zbog svoje uspješnosti u srodnim radovima \citep{kristo} dok je povezanost sa psihičkim bolestima samo spekulativna. Primjerice, moguće je da dezorganiziranost misli kod shizofrenije rezultira različitom količinom sadržaja u tekstovima, što se može očitovati na broju funkcijskih riječi. Također, ekspresivnost i ubrzanost kod bipolarnih bolesnika možda je vidljiva i u korištenju većeg broja interpunkcija. S druge strane, sklonost kontemplaciji kod depresivnih autora možda rezultira duljim riječima i rečenicama (no analiza duljine rečenica po zahtjevnosti nadilazi okvire ovog rada). Međutim, kako za ove pretpostavke nemamo potvrdu u radovima drugih autora, korištenje ovih značajki posve je eksploratorno.
+Korištene su sljedeće značajke: broj različitih riječi, broj zamjenica \emph{ja}, \emph{meni}, \emph{mene} i sl., broj interpunkcijskih znakova, broj funkcijskih riječi i prosječna dužina riječi u tekstu. Prve dvije značajke mogu se dovesti u vezu sa simptomima istraživanih poremećaja, dok su preostale tri korištene zbog prikazane uspješnosti u srodnim radovima \citep{kristo} iako je povezanost s psihičkim bolestima samo spekulativna. Primjerice, moguće je da dezorganiziranost misli kod shizofrenije rezultira različitom količinom određenih sadržaja u tekstovima, što se može očitovati na broju funkcijskih riječi. Također, ekspresivnost i ubrzanost kod bipolarnih bolesnika možda bi mogla biti vidljiva i u korištenju većeg broja interpunkcija. S druge strane, sklonost kontemplaciji kod depresivnih autora može rezultirati duljim riječima i rečenicama (iako analiza duljine rečenica po zahtjevnosti nadilazi okvire ovog rada). Međutim, kako za ove pretpostavke nema jednoznačne potvrde u radovima drugih autora, uporaba ovih značajki posve je eksploratorna.
 
-Korištenje broja različitih riječi ima svoju podlogu u povezanosti kreativnosti i bipolarnog poremećaja \citep{crea}. Budući da se kreativnost često operacionalizira pomoću raznolikosti produkcije, pretpostavljamo da će tekstovi autora s bipolarnim poremećajem imati veći broj različitih riječi u tekstu nego tekstovi drugih kategorija. Također, sklonost ka \emph{ljepljenju} na temu može se (iz različitih razloga) javiti kod oboljelih od shizofrenije ili depresivnog poremećaja, čime mogu biti ograničeni na manji skup riječi vezan uz tu temu, pa u tim skupinama vjerojatno možemo očekivati manji broj različitih riječi.
+Korištenje broja različitih riječi ima svoju podlogu u povezanosti kreativnosti i bipolarnog poremećaja \citep{crea}. Budući da se kreativnost često operacionalizira pomoću raznolikosti produkcije, može se pretpostaviti da će tekstovi autora s bipolarnim poremećajem imati veći broj različitih riječi u tekstu nego tekstovi drugih kategorija. Također, sklonost ka \emph{lijepljenju} na temu može se (iz različitih razloga) javiti kod oboljelih od shizofrenije ili depresivnog poremećaja, čime mogu biti ograničeni na manji skup riječi vezan uz tu temu, pa u tim skupinama vjerojatno možemo očekivati i manji broj različitih riječi.
 
-Motivacija za korištenje broja zamjenica nalazi se u simptomima grandioznosti prisutnih kod boljelih od bipolarnog poremećaja. Također, u radu \citep{strous-2009} razlikovanje između tekstova shizofrenih i ne-shizofrenih pacijenata rađeno je prema frekvenciji pojedinih riječi, pri čemu je zamjenica \emph{ja} bila najfrekventnija u shizofrenoj skupini. Dakako, ova značajka korištena je samo na kategorijama s tekstovima pisanima samo u prvom licu, odnosno na svim kategorijama blogova.
+Motivacija za korištenje broja zamjenica u tekstu su simptomi grandioznosti prisutni kod boljelih od bipolarnog poremećaja. Također, u radu \citep{strous-2009} razlikovanje između tekstova shizofrenih i ne-shizofrenih pacijenata obavljeno je prema frekvenciji pojedinih riječi, pri čemu je zamjenica \emph{ja} bila najfrekventnija u shizofrenoj skupini. Dakako, ova značajka korištena je samo na tekstovima pisanima isključivo u prvom licu, odnosno na svim kategorijama blogova. Budući da tekstovi u uzorku pisaca nisu svi bili pisani u prvom licu, na tim skupinama korištene su preostale četiri značajke.
 
-%quoth the server, nevermore : http://wordnetweb.princeton.edu/perl/webwn?s=function word
-%Funkcijske riječi su po definiciji zatvoreni razred neinfleksijskih riječi koje ne nose značajno značenje i vrše neku gramatičku funkciju.  Korištenje ovih riječi kao značajke osobito je pogodno u slučajevima u kojima tekstovi nisu pisani na istu temu, budući da ne ovise o tome, MISLIM DA NAM OVA DEFINICIJA IPAK NE TREBA
+\subsection{Prikupljanje uzorka tekstova}
+Podaci za analizu napravljeni su iz dvije skupine uzoraka: tekstova poznatih pisaca i tekstova prikupljenih s blogova, obje iz engleskog govornog područja. Psihički poremećaji kod pisaca (bipolarni poremećaj i depresija) identificirani su detaljnom analizom njihovih dostupnih biografija, te su u uzorak uzeti oni tekstovi koji se bave upravo autorovim osvrtom na psihičku bolest (ukoliko takvi postoje) ili su pisani u vremenskom razdoblju najbližem onom u kojem je poremećaj identificiran. Tekstovi kontrolne skupine pisaca koji ne pate od depresije, bipolarnog poremećaja ili shizofrenije odabrani su također analizom biografija, uz preferenciju prema opširnim biografijama te onima u kojima se spominje neko drugo zdravstveno stanje autora, nevezano uz psihičku bolest.
 
+Blogovi autora koji imaju neki psihički poremećaj pronađeni su preko web-stranica koje se bave tim poremećajima (npr.~\footnote{\texttt{www.psychologytoday.com}}$^,$\footnote{\texttt{ www.schizophrenia.com}}) i na njima se autori deklariraju kao oboljeli od određenog poremećaja (bipolarni, shizofrenija). Blogovi psihički zdravih autora odabrani su s lista popularnih osobnih blogova, pod uvjetom da sadrže odjeljak u kojem autor navodi podatke o sebi, a ne navodi neku psihičku bolest, te također na kojima pretraživanjem nisu pronađene ključne riječi (npr.~\emph{mental}, \emph{depression}, \emph{illness} itd.) u kontekstu psihičke bolesti autora. Svi blogovi bave se osobnim doživljajima autora i pisani su u prvom licu. U slučaju da autor bloga piše samo kratke zabilješke, spojeno je po nekoliko zabilježaka u jedan tekst, budući da su tekstovi klasificirani prema značajkama forme, a ne sadržaja (iako forma i sadržaj nisu potpuno nepovezani).
 
+Radi odsutnosti dovoljnog broja poznatih pisaca koji boluju od shizofrenije ta skupina nije prikupljena, kao ni skupina tekstova autora blogova koji boluju od depresije, zbog nerijetko olakog korištenja riječi \emph{depresija} u svakodnevnom govoru i time uzrokovane pretpostavljeno niske pouzdanosti procjene stvarne depresivnosti kod autora. Tako su se podaci za treniranje i testiranje sastojali od šest kategorija: poznati pisci s bipolarnim poremećajem, poznati pisci koji boluju od depresije, poznati pisci bez identificiranog psihičkog poremećaja, autori blogova s dijagnosticiranom shizofrenijom, autori blogova oboljeli od bipolarnog poremećaja i autori blogova bez identificiranog psihičkog poremećaja. Slijedeći kriterij o 3 -- 5 puta većem broju primjera u pojedinoj kategoriji od broja značajki \citep{ribaric} u svakoj kategoriji skupa podataka za treniranje prikupljeno je 20 primjera, osim u kategoriji blogova autora sa shizofrenijom, gdje ih zbog slabe dostupnosti ima samo 14. U skupu podataka za testiranje svaka je kategorija imala 15 primjera, osim, ponovno, kategorije blogova autora sa shizofrenijom, u kojoj ih ima samo 12. 
+
+Veličina tekstova varirala je od 3 do 24 kB, a snimani su u ANSI standardu. Uglavnom su imali iznad 5 kB, kad god je ta količina teksta bila dostupna, što približno odgovara graničnoj vrijednosti od 1000 riječi potrebnih za ispravnost nekih značajki  \citep{tweedie}. Sve značajke određivane su uzimajući u obzir duljinu teksta. 
 
 \subsection{Predobrada podataka}
 Obrada teksta je izvršena pomoću skripte pisane u programskom jeziku \emph{Perl}\footnote{\texttt{www.perl.com}}, kako bi se svakoj značajki pridružila brojčana vrijednost. Značajke su određene na sljedeći način:
 \begin{enumerate}
-\item Korištenje funkcijskih riječi određeno je kao frekvencija pojavljivanja funkcijskih riječi u tekstu u odnosu na broj svih riječi u tekstu. Takve riječi su u engleskom jeziku prilozi, prijedlozi, odrednice, veznici, pomoćni glagoli i čestice. Korištena je lista od 159 čestih funkcijskih riječi, preborjano njihovo pojavljivanje u tekstu, te podijeljeno brojem svih riječi u tekstu;
-\item Broj interpunkcijskih znakova određen je kao frekvencija pojavljivanja interpunkcijskih znakova u odnosu na dužinu teksta. Korištena je manja grupa interpunkcijskih znakova koja se sastoji od: točke (.), upitnika (?), uskličnika (!), zareza (,), dvotočja (:), točke-zareza (;), apostrofa ('). Znakovi navoda ni crtica nisu prebrojavani, budući da zbog različitog načina navođenja dijaloga to može biti odrednica dizajna knjige i slova, a ne značajka samog teksta;
-\item Broj zamjenica za prvo lice jednine određivan je kao frekvencija pojavljivanja tih zamjenica u odnosu na broj svih riječi u tekstu;
-\item Broj različitih riječi u tekstu određen je kao postotni udio različitih riječi u broju svih riječi u tekstu;
-\item Prosječna dužina riječi u tekstu izračunata je zbrajanjem duljina svih riječi u tekstu, te dijeljenjem sa brojem riječi.
+\item korištenje funkcijskih riječi određeno je kao frekvencija pojavljivanja funkcijskih riječi u tekstu u odnosu na broj svih riječi u tekstu. Takve riječi su u engleskom jeziku prilozi, prijedlozi, odrednice, veznici, pomoćni glagoli i čestice. Korištena je lista od 159 čestih funkcijskih riječi, prebrojano je njihovo pojavljivanje u tekstu, te podijeljeno brojem svih riječi u tekstu;
+\item broj interpunkcijskih znakova određen je kao frekvencija pojavljivanja interpunkcijskih znakova u odnosu na dužinu teksta. Korištena je manja grupa interpunkcijskih znakova koja se sastoji od točke, upitnika, uskličnika, zareza, dvotočja, točke-zareza i apostrofa. Znakovi navoda ni crtica nisu prebrojavani, budući da zbog različitog načina navođenja dijaloga to može biti odrednica dizajna knjige i slova, a ne značajka samog teksta;
+\item broj zamjenica za prvo lice jednine određivan je kao frekvencija pojavljivanja tih zamjenica u odnosu na broj svih riječi u tekstu;
+\item broj različitih riječi u tekstu određen je kao postotni udio različitih riječi u broju svih riječi u tekstu;
+\item prosječna dužina riječi u tekstu izračunata je zbrajanjem duljina svih riječi u tekstu, te dijeljenjem sa brojem riječi.
 \end{enumerate}
 
 
@@ -92,132 +95,132 @@ Obrada teksta je izvršena pomoću skripte pisane u programskom jeziku \emph{Per
 
 Provedba postupaka strojnog učenja na obrađenim tekstovima rađena je u programskom alatu \emph{Weka} \footnote{\texttt{http://www.cs.waikato.ac.nz/ml/weka/}}, koji podržava velik broj algoritama analize podataka i prediktivnog modeliranja. S obzirom na jednostavnost uporabe različitih algoritama nadziranog učenja u \emph{Weka}-i korišteno ih je nekoliko te su uspoređeni rezultati.  
 
-\emph{Naivni Bayesov klasifikator} pridjeljuje primjeru onu klasu za koju je vjerojatnost najveća na temelju njegovog vektora svojstava, uz pretpostavku da su svojstva nezavisna. Temelji se na Bayesovom teoremu \citep{bayes-63}. Iako je prilično jednostavan, koji počiva na često pogrešnoj pretpostavci o nezavisnosti svojstava, u upotrebi redovito daje dobre rezultate \citep{hand-yu}
+\emph{Naivni Bayesov klasifikator} pridjeljuje primjeru onu klasu za koju je vjerojatnost najveća na temelju njegovog vektora svojstava, uz pretpostavku da su svojstva nezavisna. Temelji se na Bayesovom teoremu \citep{bayes-63}. Iako je prilično jednostavan, i počiva na često pogrešnoj pretpostavci o nezavisnosti svojstava, u uporabi redovito daje dobre rezultate \citep{hand-yu}
 
 \emph{Naivni Bayesov klasifikator s procjenom jezgrene funkcije} temelji se na klasičnom Bayesovom klasifikatoru uz razliku da ne pretpostavlja normalnu raspodjelu neprekinutih varijabli, već radi procjenu jezgrene funkcije, tj.~distribucije iz koje proizlaze kontinuirane varijable \citep{john-95}.
 
 \emph{Stroj s potpornim vektorima} \engl{Support Vector Machine, SVM} je metoda strojnog učenja koja se temelji na konstrukciji hiperravnine ili hiperravnina koje odjeljuju primjere. Hiperravnine se pronalaze traženjem \emph{potpornih vektora}, tj.~onih primjera koji pripadaju različitim klasama, a najmanje su međusobne udaljenosti \citep{cortes-vap}
 
-%\emph{Umjetne neuronske mreže} \engl{artifical neural networks} su mreže međusobno povezanih \emph{neurona}, nezavisnih isprogramiranih djelova koji obavljaju neku jednostavnu funkciju, da bi kao cjelina obavljali složeniju zadaću. Osnovni model umjetne neuronske mreže je perceptron \cite{rosenblatt-58}.
 
 
 \section{Rezultati}
 
-Podaci za analizu napravljeni su iz uzorka tekstova poznatih pisaca i tekstova prikupljenih sa blogova, oboje iz engleskog govornog područja. Psihički poremećaji kod pisaca (bipolarni poremećaj i depresija) identificirani su detaljnom analizom njihovih dostupnih biografija, te su u uzorak uzeti oni tekstovi koji se bave upravo autorovim osvrtom na psihičku bolest (ukoliko takvi postoje) ili su pisani u vremenskom razdoblju najbližem onom u kojem je poremećaj identificiran. Tekstovi pisaca koji ne pate od depresije, bipolarnog poremećaja ili shizofrenije odabrani su također analizom biografija, uz preferenciju prema opširnim biografijama te onima u kojima se spominje neko drugo zdravstveno stanje autora, nevezano uz psihičku bolest.
 
-Blogovi autora koji imaju neki psihički poremećaj pronađeni su preko web-stranica koje se bave tim poremećajima \footnote{npr.~\texttt{www.psychologytoday.com},\texttt{ www.schizophrenia.com}} i na njima se autori deklariraju kao oboljeli od određenog poremećaja (bipolarni, shizofrenija). Blogovi psihički zdravih autora odabrani su s lista popularnih osobnih blogova, a koji sadrže odjeljak u kojem se autor opisuje i u kojem navodi podatke o sebi, no ne navodi neku psihičku bolest, te također na kojima pretraživanjem nisu pronađene ključne riječi (npr.~\emph{mental}, \emph{depression}, \emph{illness} itd.) u kontekstu psihičke bolesti autora. Svi blogovi bave se osobnim doživljajima autora i pisani su u prvom licu. U slučaju da autor bloga piše samo kratke zabilješke, spojeno je nekoliko zabilješki u jedan tekst, budući da tekstove pokušavamo klasificirati prema značajkama forme, a ne sadržaja (iako ova aspekta nisu potpuno nepovezana).
-
-Radi odsutnosti dovoljnog broja poznatih pisaca koji boluju od shizofrenije ta skupina nije prikupljena, kao ni skupina tekstova autora blogova koj boluju od depresije, zbog ponekad olakog korištenja riječi depresija u svakodnevnom govoru i time uzrokovane pretpostavljene niske pouzdanosti procjene stvarne depresivnosti kod autora. Tako su se podaci za treniranje i testiranje sastojali od šest kategorija: poznati pisci s bipolarnim poremećajem, poznati pisci koji boluju od depresije, poznati pisci bez identificiranog psihičkog poremećaja, autori blogova s dijagnosticiranom shizofrenijom, autori blogova oboljeli od bipolarnog poremećaja i autori blogova bez identificiranog psihičkog poremećaja. Slijedeći kriterij o 3 do 5 puta većem broju primjera u pojedinoj kategoriji od broja značajki \citep{ribaric} u svakoj kategoriji skupa podataka za treniranje prikupljeno je 20 primjera, osim u kategoriji blogova autora sa shizofrenijom, gdje ih zbog loše dostupnosti ima 14. U skupu podataka za testiranje svaka je kategorija imala 15 primjera, osim, ponovno, kategorije blogova autora sa shizofrenijom, u kojoj ih ima 12. 
-
-Veličina tekstova varirala je od 3 kB do 24 kB, te su snimani u ANSI standardu. Pretežno su imali iznad 5 kB, kada god je ta količina teksta bila dostupna, što odgovara graničnoj vrijednosti od 1000 riječi potrebnih za ispravnost nekih značajki  \citep{tweedie}. Sve značajke određivane su uzimajući u obzir duljinu teksta. 
  
-Korišteni su naivni Bayesovi klasifikatori implementirani u Weka-i. SVM s radijalnom baznom funkcijom korišten je pomoću biblioteke WLSVM \footnote{\texttt{www.cs.iastate.edu/~yasser/wlsvm}} \citep{yh05}. Sve značajke su normalizacijom svedene na raspon $ [0,1]$. Prilikom izrade modela korištena je 10-prolazna unakrsna provjera. Potom je na najboljim modelima za pojedine kombinacije skupina i značajki testirana uspješnost modela na odvojenim skupovima za testiranje.
+Za obradu prikupljenih podataka korišteni su naivni Bayesovi klasifikatori implementirani u Weka-i. SVM s radijalnom baznom funkcijom korišten je pomoću biblioteke WLSVM \footnote{\texttt{www.cs.iastate.edu/~yasser/wlsvm}} \citep{yh05}. Sve značajke su normalizacijom svedene na raspon $[0,1]$. Prilikom izrade modela korištena je deseterostruka unakrsna provjera. Potom je na najboljim modelima za pojedine kombinacije skupina i značajki testirana uspješnost modela na odvojenim skupovima za testiranje.
 
-Referentna metoda čije rezultate uspoređujemo sa rezultatima naših klasifikatora je klasifikacija u apriorno najvjerojatniju klasu. U realnim uvjetima dijagnostike i na velikim uzorcima mogla bi se koristiti metoda koja u obzir uzima prevalenciju pojedinih psihičkih bolesti u populaciji, prevalencija u populaciji ljudi koji dolaze na psihologijsku procjenu, ili pak prevalencija u populaciji pisaca, međutim, takvi podaci nisu nam dostupni.
+Referentna metoda čiji su rezultati uspoređeni s rezultatima klasifikatora je klasifikacija u apriorno najvjerojatniju klasu. U realnim uvjetima dijagnostike i na velikim uzorcima mogla bi se koristiti metoda koja u obzir uzima prevalenciju pojedinih psihičkih bolesti u populaciji, prevalenciju u populaciji ljudi koji dolaze na psihologijsku procjenu, ili pak prevalenciju u populaciji pisaca, međutim, takvi podaci nisu dostupni. U preliminarnim ispitivanjima korištene su i druge metode izrade klasifikatora, no njihova uspješnost nije bila bolja od referentne metode, stoga nisu dalje korišteni.
 
 \begin{table*}
-\caption{Postotak točno klasificiranih primjera  na skupu blogova korištenjem različitih algoritama}
+\caption{Postotak točno klasificiranih primjera  na skupu blogova korištenjem različitih algoritama.}
 \label{tab:rezultati}
 \begin{center}
-\begin{tabular}{ll}
+\begin{tabular}{lll}
 \toprule
-Metoda & Točno klasificiranih \\
+Metoda & Točno klasificiranih & F1 \\
 \midrule
-Naivni Bayesov klasifikator & 50,0\%\\
-Naivni Bayesov klasifikator s procjenom jezgrene funkcije   & 50,0\%\\
-SVM   & 35.7\%\\
-Apriorno najvjerojatnija klasa & 36.3\%\\
+Naivni Bayesov klasifikator & 50,0\% & 0,477\\
+ \textbf{Naivni Bayesov klasifikator s procjenom jezgrene funkcije}   & \textbf{ 50,0\%} &  \textbf{0,5}\\
+SVM   & 35,7\% & XXX\\
+Apriorno najvjerojatnija klasa & 36,3\% & 0,357\\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table*}
 \begin{table*}
-\caption{Postotak točno klasificiranih primjera na skupu pisaca }
+
+
+\caption{Postotak točno klasificiranih primjera na skupu pisaca. }
 \begin{center}
-\begin{tabular}{ll}
+\begin{tabular}{lll}
 \toprule
-Metoda & Točno klasificiranih\\
+Metoda & Točno klasificiranih & F1\\
 \midrule
-Naivni Bayesov klasifikator & 52.2\%\\
-Naivni Bayesov klasifikator s procjenom jezgrene funkcije & 56.5\%\\
-SVM & 50,0\%\\
-Apriorno najvjerojatnija klasa & 33.3\%\\
+Naivni Bayesov klasifikator & 52,2\% & 0,522\\
+ \textbf{Naivni Bayesov klasifikator s procjenom jezgrene funkcije} &  \textbf{56,5\%} & \textbf{0,565}\\
+SVM & 50,0\% & XXX\\
+Apriorno najvjerojatnija klasa & 33,3\% & 0,326\\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table*}
 
 \begin{table*}
-\caption{Postotak točno klasificiranih primjera na skupu blogova po parovima klasa korištenjem različitih algoritama}
+\caption{Postotak točno klasificiranih primjera na skupu blogova po parovima klasa korištenjem različitih algoritama.}
 \label{lab:rezultatiBlogGrupa}
 \begin{center}
 \begin{tabular}{lll}
 \toprule
 Grupe & Metoda & Točno klasificiranih\\
 \midrule
-\textbf{Normalni, shizofreni} & \textbf{Bayes} & \textbf{81.5\%}\\
- & Bayes s procjenom jezgrene funkcije. & 70.4\%\\
- & SVM & 62.0\%\\
- & Apriorno najvjerojatnija klasa & 59.0\%\\
+\textbf{Normalni, shizofreni} & \textbf{Bayes} & \textbf{81,5\%}\\
+ & Bayes s procjenom jezgrene funkcije & 70,4\%\\
+ & SVM & 62,0\%\\
+ & Apriorno najvjerojatnija klasa & 59,0\%\\
 \midrule
- Bipolarni, shizofreni &  Bayes &  70.4\%\\
- & Bayes s procjenom jezgrene funkcije & 63.0\%\\
- & SVM & 59.0\%\\
- & Apriorno najvjerojatnija klasa & 59.0\%\\
+ Bipolarni, shizofreni &  Bayes &  70,4\%\\
+ & Bayes s procjenom jezgrene funkcije & 63,0\%\\
+ & SVM & 59,0\%\\
+ & Apriorno najvjerojatnija klasa & 59,0\%\\
 \midrule
-Bipolarni, normalni & Bayes & 66.7\%\\
- & Bayes s procjenom jezgrene funkcije. & 66.7\%\\
- & SVM & 46.6\%\\
- & Apriorno najvjerojatnija klasa & 50.0\%\\
+Bipolarni, normalni & Bayes & 66,7\%\\
+ & Bayes s procjenom jezgrene funkcije & 66,7\%\\
+ & SVM & 46,6\%\\
+ & Apriorno najvjerojatnija klasa & 50,0\%\\
  \bottomrule
  \end{tabular}
  \end{center}
  \end{table*}
+
+
 \begin{table*}
-\caption{Postotak točno klasificiranih primjera na skupu pisaca po parovima klasa korištenjem različitih algoritama}
+\caption{Postotak točno klasificiranih primjera na skupu pisaca po parovima klasa korištenjem različitih algoritama.}
 \label{tab:rezultPisciGrupa}
 \begin{center}
 \begin{tabular}{lll}
 \toprule
 Grupe & Metoda & Točno klasificiranih\\
 \midrule
-Depresivni, normalni & Bayes & 60.0\%\\
- & Bayes s procjenom jezgrene funkcije & 70.0\%\\
- & SVM & 67.4\%\\
-  & Apriorno najvjerojatnija klasa & 50.0\%\\
+Depresivni, normalni & Bayes & 60,0\%\\
+ & Bayes s procjenom jezgrene funkcije & 70,0\%\\
+ & SVM & 67,4\%\\
+  & Apriorno najvjerojatnija klasa & 50,0\%\\
 \midrule
-Bipolarni, normalni & Bayes & 64.5\%\\
- & Bayes s procjenom jezgrene funkcije & 67.7\%\\
- & SVM & 67.7\%\\
-  & Apriorno najvjerojatnija klasa & 50.0\%\\
+Bipolarni, normalni & Bayes & 64,5\%\\
+ & Bayes s procjenom jezgrene funkcije & 67,7\%\\
+ & SVM & 67,7\%\\
+  & Apriorno najvjerojatnija klasa & 50,0\%\\
 \midrule
- \textbf{Bipolarni, depresivni} &  Bayes &  66.7\%\\
- &  \textbf{Bayes s procjenom jezgrene funkcije} &  \textbf{76.7\%}\\
-  & SVM & 60.0\%\\
-   & Apriorno najvjerojatnija klasa & 50.0\%\\
+ \textbf{Bipolarni, depresivni} &  Bayes &  66,7\%\\
+ &  \textbf{Bayes s procjenom jezgrene funkcije} &  \textbf{76,7\%}\\
+  & SVM & 60,0\%\\
+   & Apriorno najvjerojatnija klasa & 50,0\%\\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table*}
 
-Iz tablica s rezultatima vidljivo je da se SVM algoritam nije pokazao osobito uspješnim u klasifikaciji ovih podataka, generirajući rezultate u rangu sa onima koj pridjeljuju primjere u apriorno najvjerojatniju klasu, do najviše 17\% povećanja uspješnosti. Manja poboljšanja u klasifikaciji mogu se postići izbacivanjem nekih značajki. Npr.~na uzorku blogova izbacivanje značajke broja interpunkcije i broja različitih riječi, a kada se uspoređuju samo autori s bipolarnim poremećajem i oni bez poremećaja, povećava točnost za nekoliko postotaka. No, i dalje su ovi rezultati vidljivo lošiji od onih dobivenih Bayesovim klasifikatorima. Moguće je da je SVM algoritmu zbog malog raspona rezultata i sličnosti primjera otežano naći dobre potporne vektore, pa su stoga rezultati lošiji. 
+Iz prikazanih tablica s rezultatima vidljivo je da se SVM algoritam nije pokazao osobito uspješnim u klasifikaciji ovih podataka, generirajući rezultate u rangu s onima koj pridjeljuju primjere u apriorno najvjerojatniju klasu, do najviše 17\% povećanja uspješnosti. Manja poboljšanja u klasifikaciji mogu se postići izbacivanjem nekih značajki. Npr.~na uzorku blogova izbacivanje značajke broja interpunkcije i broja različitih riječi, u slučaju kad se uspoređuju samo autori s bipolarnim poremećajem i oni bez poremećaja, povećava točnost za nekoliko postotaka. No, i dalje su ovi rezultati vidljivo lošiji od onih dobivenih Bayesovim klasifikatorima. Moguće je da SVM algoritmu zbog malog raspona rezultata i sličnosti primjera otežano naći dobre potporne vektore, pa su stoga rezultati lošiji. 
 
-Usporedbom rezultata za Bayesov klasifikator i Bayesov klasifikator s procjenom jezgrene funkcije uočavamo neke pojave očekivane s obzirom na njihov način rada. Naime, iz rezultata, kao i iz razdioba značajki, vidi se da korištenje procjene jezgrene funkcije ima više smisla u slučaju pisaca, budući da razdiobe broja funkcijskih riječi, interpunkcijskih znakova i postotak različitih riječi ne podliježu normalnoj razdiobi, što je osobito naglašeno između skupina pisaca s bipolarnim poremećajem i onih s depresijom. U skladu s objašnjenjem našeg odabira značajki, kod onih s bipolarnim poremećajem disribucija je pomaknuta prema različitijim riječima, dok je kod depresivnih obrnuto. Zanimljivo je da je to naglašeno kod profesionalnih pisaca, a ne kod autora blogova, iako bismo očekivali da profesionalni pisci naspram ljudi koji se ne bave pisanjem profesionalno imaju bogatiji vokabular pa će te razlike biti manje.
+Usporedbom rezultata za Bayesov klasifikator i Bayesov klasifikator s procjenom jezgrene funkcije uočavamo neke pojave očekivane s obzirom na njihov način rada. Naime, iz rezultata, kao i iz razdioba značajki, vidi se da korištenje procjene jezgrene funkcije ima više smisla u slučaju pisaca, budući da razdiobe broja funkcijskih riječi, interpunkcijskih znakova i postotak različitih riječi ne podliježu normalnoj razdiobi, što je osobito naglašeno između skupina pisaca s bipolarnim poremećajem i onih s depresijom. U skladu s objašnjenjem našeg odabira značajki, kod onih s bipolarnim poremećajem distribucija je pomaknuta prema različitijim riječima, dok je kod depresivnih obrnuto. Zanimljivo je da je to naglašeno kod profesionalnih pisaca, a ne kod autora blogova, iako bismo očekivali da profesionalni pisci naspram ljudi koji se ne bave pisanjem profesionalno imaju bogatiji vokabular pa će te razlike biti manje.
 
 U analizi podataka nije primijećeno da bi Bayesovi klasifikatori imali trend činiti greške favorizirajući jednu kategoriju, iako su početne analize ukazivale na suprotno. Standardizacijom podataka to je izbjegnuto i postignuti su balansirani rezultati.
 
-Izostanak očekivanog uspjeha izrade automatskog klasifikatora mentalnog statusa autora tekstova u ovom radu u konačnici ima optimističnu notu: s obzirom da su tekstovi prikupljeni  od autora koji imaju dijagnozu, no u vrijeme pisanja tekstova najvjerojatnije nisu bili u akutnoj fazi bolesti, moguće je da utjecaj bolesti van akutne faze nije dovoljno jak da bi dovoljno ugrozio kognitivno funkcioniranje bolesnika da bi se ono očitovalo na njihovom pisanju. 
+Djelomični izostanak očekivanog uspjeha izrade automatskog klasifikatora mentalnog statusa autora tekstova u ovom radu u konačnici ipak ima optimističnu poruku: s obzirom da su tekstovi prikupljeni  od autora koji imaju dijagnozu, no tijekom pisanja tekstova najvjerojatnije nisu bili u akutnoj fazi bolesti, moguće je da utjecaj bolesti izvan akutne faze nije nio dovoljno jak da bi dovoljno ugrozio kognitivno funkcioniranje bolesnika toliko da bi se ono očitovalo na njihovom pisanju. 
 
 
 
 
 \section{Zaključak}
 
-U svrhu boljeg razumijevanja psihičkih bolesti i eventualnog doprinosa dijagnostici istih u ovom radu pokušali smo izraditi klasifikator tekstova prema mentalnom statusu autora, koje je obuhvaćalo autore sa bipolarnim poremećajem, shizofrenijom i depresijom, te one bez tih psihičkih poremećaja. Korišteni su tekstovi poznatih pisaca i tekstovi preuzeti s blogova, a pokušali smo ih klasificirati na temelju značajki broja različitih riječi, broja zamjenica prvog lica, broja interpunkcijskih znakova, broja funkcijskih riječi i prosječne dužine riječi u tekstu. 
+U svrhu boljeg razumijevanja psihičkih bolesti i mogućeg poboljšanja njihove dijagnostike u ovom smo radu pokušali izraditi klasifikator tekstova prema mentalnom statusu autora, koji je obuhvaćalo autore sa bipolarnim poremećajem, shizofrenijom i depresijom, te one bez tih psihičkih poremećaja. Korišteni su tekstovi poznatih pisaca i tekstovi preuzeti s blogova, a pokušali smo ih klasificirati na temelju značajki broja različitih riječi, broja zamjenica prvog lica, broja interpunkcijskih znakova, broja funkcijskih riječi i prosječne dužine riječi u tekstu. 
 
-Ovakav pristup problemu nije postigao znatan uspjeh. Najuspješnije su bile klasifikacije na skupu blogova naivnim Bayseovim algoritmom, i to klasifikacija shizofrenih autora nasuprot onih bez poremećaja uz 81,5\% točnosti u usporedbi sa 59\% referentne metode, i pisaca s bipolarnim poremećajem nasuprot onih sa depresijom uz 76,7\% točnosti Bayesovim algoritmom s procjenom jezgrene funkcije, nasuprot 50\% točnosti referentne metode. U usporedbi s uspješnosti jednostavne referentne metode, to nije osobito veliko poboljšanje, no daje naznaku da postoje trendovi u pozadini ovog problema koje valja dalje istražiti. 
+Ovakav pristup problemu nije postigao očekivani uspjeh. Najuspješnije su bile klasifikacije na skupu blogova naivnim Bayseovim algoritmom, i to klasifikacija shizofrenih autora nasuprot onih bez poremećaja uz 81,5\% točnosti u usporedbi sa 59\% referentne metode, i pisaca s bipolarnim poremećajem nasuprot onih sa depresijom uz 76,7\% točnosti Bayesovim algoritmom s procjenom jezgrene funkcije, nasuprot 50\% točnosti referentne metode. U usporedbi s uspješnosti jednostavne referentne metode, to nije osobito veliko poboljšanje, no daje naznaku da postoje trendovi u pozadini ovog problema koje valja dalje istražiti. 
 
-Dakako, postoji mnogo prostora za poboljšanja metodološkog pristupa. U budućim istraživanjima bilo bi dobro koristiti tekstove za koje pouzdano znamo da su ih autori pisali u akutnoj fazi svoje bolesti, kada su kognitivne funkcije najviše pogođene, čime bi se povećala izglednost dobivanja uspješnijeg razlikovanja među tekstovima. Također, bilo bi dobro koristiti tekstove koji su pisani na istu temu (na tragu korištenja osobnih blogova), kako bi se smanjila mogućnost da semantički kontekst utječe na rezultate, ili pak da se lakše koriste neke potencijalno korisne semantičke značajke. Osim toga moglo bi se kontrolirati vještinu pisanja autora tekstova koristeći autore koji nisu izrazito vješti u tome kao što su profesionalni pisci, te koristiti nezavisne procjene stručnjaka za određivanje kvalitete teksta. Moguće je da bi i veći uzorak tekstova donio bolje rezultate, no problematično je njegovo prikupljanje s obzirom na malu populaciju oboljelih. Također, mogle bi se koristiti još neke značajke, a čija je implementacija bila preopširna za okvire ovog rada: frekvencije izraza \engl{term frequency, TF}, inverzne frekvencije dokumenta \engl{inverse document frequency} i njihovih međuodnosa sa frekvencijom funkcijskih riječi.
+Naime, postoji mnogo prostora za poboljšanje primjenjenog metodološkog pristupa. U budućim istraživanjima bilo bi dobro koristiti tekstove za koje pouzdano znamo da su ih autori pisali u akutnoj fazi svoje bolesti, kada su kognitivne funkcije nile najviše pogođene, čime bi se povećala izglednost dobivanja uspješnijeg razlikovanja među tekstovima. Također, bilo bi dobro koristiti tekstove koji su pisani na istu temu (na tragu korištenja osobnih blogova), kako bi se smanjila mogućnost da semantički kontekst utječe na rezultate, ili pak da se lakše koriste neke potencijalno korisne semantičke značajke. Osim toga, moglo bi se kontrolirati vještinu pisanja autora tekstova koristeći autore koji nisu izrazito vješti u tome kao što su profesionalni pisci, te koristiti nezavisne procjene stručnjaka za određivanje kvalitete teksta. Moguće je da bi i veći uzorak tekstova donio bolje rezultate, no problematično je njegovo prikupljanje s obzirom na malu populaciju oboljelih. Također, mogle bi se koristiti još neke značajke, a čija je implementacija bila preopširna za okvire ovog rada, primjerice frekvencije izraza \engl{term frequency, TF}, inverzne frekvencije dokumenta \engl{inverse document frequency} i njihove međuodnose sa frekvencijom funkcijskih riječi.
+
+\section*{Zahvale}
+Zahvaljujemo anonimnim recenzentima na dobivenim smjernicama za poboljšanje rada.
 
 \bibliographystyle{su2010}
 \bibliography{su2010} 
