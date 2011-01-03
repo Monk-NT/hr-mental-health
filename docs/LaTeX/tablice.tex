@@ -1,0 +1,73 @@
+% PredloĹľak za izradu rada za konferenciju SU2010
+% (C) 2010 Jan Ĺ najder
+% KTLab, FER
+
+\documentclass[10pt, a4paper]{article}
+
+\usepackage{su2010}
+
+\usepackage[croatian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Klasificiranje mentalnog zdravlja autora analizom teksta }
+
+%VAĹ˝NO: Zakomentirajte sljedeÄ‡u liniju kada Ĺˇaljete rad na recenziju
+\name{Sonja GrÄ‘an, Veljko SrdareviÄ‡} 
+
+\address{
+SveuÄŤiliĹˇte u Zagrebu, Fakultet elektrotehnike i raÄŤunarstva\\
+Unska 3, 10000 Zagreb, Hrvatska\\ 
+\texttt{\{sonja.grdan,veljko.srdarevic\}@fer.hr}\\
+}
+
+\begin{document}
+\begin{table*}
+\label{tab:prva}
+\caption{Najbolje metode za sve grupe na skupovima blogova i poznatih pisaca.}
+\begin{center}
+\begin{tabular}{llrr}
+\toprule
+Skup & Metoda & Točno klasificiranih & $F_1$ \\
+\midrule
+Blog sve grupe & 
+ \textbf{Naivni Bayesov klasifikator s procjenom jezgrene funkcije}   & \textbf{50,0\%} &  \textbf{0,500}\\
+Pisci sve grupe &
+ \textbf{Naivni Bayesov klasifikator s procjenom jezgrene funkcije} &  \textbf{56,5\%} & \textbf{0,565}\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table*}
+\begin{table*}
+\label{tab:druga}
+\caption{Najbolje metode na podskupovima skupa blogova.}
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Skup & Metoda & Točno klasificiranih\\
+\midrule
+Normalni, shizofreni & \textbf{Bayes} & \textbf{81,5\%}\\
+ Bipolarni, shizofreni &   \textbf{Bayes} &   \textbf{70,4\%}\\
+ Bipolarni, normalni & \textbf{Bayes} &  \textbf{66,7\%}\\
+ \bottomrule
+\end{tabular}
+\end{center}
+\end{table*}
+\begin{table*}
+\caption{Najbolje metode na podskupovima skupa pisaca.}
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Skup & Metoda & Točno klasificiranih\\
+\midrule
+ Depresivni, norlmalni &  \textbf{Bayes s procjenom jezgrene funkcije} &  \textbf{70,0\%}\\
+ Bipolarni, normalni &  \textbf{SVM} &  \textbf{67,7\%}\\
+ Bipolarni, depresivni  &  \textbf{Bayes s procjenom jezgrene funkcije} &  \textbf{76,7\%}\\
+ \bottomrule
+ \end{tabular}
+ \end{center}
+ \end{table*}
+\end{document}
