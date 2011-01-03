@@ -1,13 +1,5 @@
 BILJEŠKA O IZMJENAMA
 
-Ovi su nam još ostali:
-A-3, D-7 - to ak napraviš u weki, onda dodamo, ak ne, onda brišemo to iz Srodnih radova, pa ko da nikad postojalo nije
-
-Za ove još ne znam kaj bih napisala i dal æemo ih radit uopæe:
-E-3 - kolko ti je komplicirano napravit nekakve prosjeène vrijednosti npr broja rijeèi razl po skupinama, i slièno?
-E-4
-D-4 - neda mi se, ali kak to napisati
-
 
 
 Uèinjene izmjene:
@@ -19,15 +11,16 @@ Uèinjene izmjene:
 - dodan brojèani rezultat koji je nedostajao u Srodnim radovima (D-2)
 - dodana usporedba sa srodnim radovima u Rezultate (D-8)
 - brojèani rezultati izbaèeni iz Zakljuèka (D-9, E-2)
+- izbaèen dio o prouèavanju utjecaja pojedinih znaèajki (to jednostavno nismo stigli napraviti, a i pitanje je ima li smisla na ovako malom uzorku - A-3, D-7)
+- prepravljeni opisi velièine tekstova iz kB u broj rijeèi (D-4) 
 
-
-Neke izmjene/prijedloge/dopune nismo usvojili u ovom radu zbog zadržavanja rada u traženom opsegu, iako su mahom kvalitetne ideje (A-1, A-2, C-3, G-x)
+Neke izmjene/prijedloge/dopune nismo usvojili u ovom radu zbog zadržavanja rada u traženom opsegu, iako su mahom kvalitetne ideje (A-1, A-2, C-3, G-x).
 
 Dio prijedloga prestrukturiranja rada iz (B-1) nije uèinjen, jer smatramo da je naša struktura više u skladu s uputama (primjerice, da svi pojmovi iz naslova budu objašnjeni u Uvodu). Iz istoga razloga nije prihvaæen (E-1).
 
 Jeziène izmjene smo uglavnom uvažili, a one koje nismo uglavnom su stilskog karaktera.
 
-U nekoliko komentara nismo mogli dokuèiti što je autor želio reæi, pa smo ih prihvatili u onom dijelu koji smo shvatili (D-1, D-2) 
+U nekoliko komentara nismo mogli dokuèiti što je autor želio reæi, pa smo ih prihvatili u onom dijelu koji smo shvatili (D-1, D-2).
 
 Posebno želimo istaknuti recenziju A u kojoj su navedeni odlièni prijedlozi za poboljšanje rada, i uz to objašnjeni konkretno i jasno, pa iz tih razloga mislimo da je jako korisna i kvalitetna.
 
